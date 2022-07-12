@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-function Vehicle() {
-    let { vehicleSlug } = useParams();
-
-    useEffect(() => {
-        // Fetch vehicle using the vehicleSlug
-    }, [vehicleSlug]);
-
-    return (
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
         <div className="home">
             <div class="container">
                 <h1 className="mt-5">This is Vehicle 1 Make and Model</h1>
@@ -33,7 +31,5 @@ function Vehicle() {
                 </p>
             </div>
         </div>
-    );
-}
-
-export default Vehicle;
+    </body>
+</html>
