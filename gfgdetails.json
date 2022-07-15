@@ -1,0 +1,32 @@
+[
+    {
+        "Year": "2015", 
+        "Make": "Porsche", 
+        "Model": "911 Carrera", 
+        "Price": "$39,000"
+    },
+    {
+        "Year": "2005", 
+        "Make": "Toyota", 
+        "Model": "Corolla", 
+        "Price": "$5,000"
+    },
+    {
+        "Year": "2019", 
+        "Make": "Dodge", 
+        "Model": "Charger", 
+        "Price": "$20,000"
+    },
+    {
+        "Year": "2010", 
+        "Make": "Toyota", 
+        "Model": "Camry", 
+        "Price": "$9,000"
+    },
+    {
+        "Year": "2007", 
+        "Make": "BMW", 
+        "Model": "750i", 
+        "Price": "$6,000"
+    }
+]

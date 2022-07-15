@@ -4,15 +4,411 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Inventory | San J Motors</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script src="jquery-3.6.0.js"></script>
+
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+            }
+
+            /* Center website */
+            .main {
+            max-width: 1000px;
+            margin: auto;
+            }
+
+            /* h1 {
+            font-size: 50px;
+            word-break: break-all;
+            } */
+            h1 {
+                word-break: break-all;
+                color: #0c68b5;
+                font-size: 50px;
+                word-break: break-all;
+                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri','Trebuchet MS', 'sans-serif';
+            }
+            h2 {
+                word-break: break-all;
+                color: #0c68b5;
+                font-size: 30px;
+                word-break: break-all;
+                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri','Trebuchet MS', 'sans-serif';
+            }
+            h3 {
+                word-break: break-all;
+                /* color: #0c68b5; */
+                font-size: 20px;
+                word-break: break-all;
+                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri','Trebuchet MS', 'sans-serif';
+            }
+            .row {
+            margin: 8px -16px;
+            }
+
+            /* Add padding BETWEEN each column */
+            .row,
+            .row > .column {
+            padding: 8px;
+            }
+
+            /* Create four equal columns that floats next to each other */
+            .column {
+            float: left;
+            width: 25%;
+            }
+
+            /* Clear floats after rows */ 
+            .row:after {
+            content: "";
+            display: flex;
+            clear: both;
+            }
+
+            /* Content */
+            .content {
+            background-color: white;
+            padding: 10px;
+            }
+
+            /* Responsive layout - makes a two column-layout instead of four columns */
+            @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+            }
+
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+            }
+            
+            #target {
+                max-width:100%;
+                width:600px;
+                margin:0 auto;
+            }
+            .image-list {
+                position:relative;
+                float: left;
+                display:inline;
+            }
+            .image-styles {
+                margin:15px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+            }
+            .image-title {
+                background:#000;
+                width:80%;
+                position:absolute;
+                bottom:15px;
+                left:15px;
+                color:#f7f7f7;
+                text-align:center;
+                padding:2px;
+                opacity:0.6;
+                filter:alpha(opacity=60);
+                /* For IE8 and earlier */
+            }
+
+            table {
+                margin: 0 auto;
+                font-size: large;
+                border: 1px solid black;
+            }
+      
+
+      
+            td {
+                background-color: #0c68b5;
+                border: 1px solid black;
+            }
+      
+            th,
+            td {
+                font-weight: bold;
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+            }
+      
+            td {
+                font-weight: lighter;
+                color: white;
+            }
+        </style>
     </head>
-    <body>
-        <div className="home">
-            <div class="container">
-                <h1 className="text=center mt-5">Inventory Page</h1>
-                <Outlet />
+
+
+    <body class="wrapper">
+        <header class="bg-primary">
+            <div class="flex flex-column">
+                <div class="secondary">
+                    <div class="left">
+                        <a href="index.html">
+                            <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                        </a>
+                    </div>
+                    <div class="right">Contact</div>
+                    <div class="right">Social Media</div>
+                </div>
+                <div class="bg-secondary">
+                    <ul class="flex justify-around list-style-none h3 caps">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="inventory.html">Inventory</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+        
             </div>
+        </header>
+
+        <div class="row">
+            <h1>Inventory Page</h1>
+            <p>All Vehicles For Sale</p>
         </div>
+
+        <!-- Vehicle Gallery Grid -->
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <img src="images/mazda-rx8-2009-06548/image-1.JPG" alt="vehicle" style="width:100%">
+                    <h3>2009 Mazda RX-8</h3>
+                    <br>
+                    <h2>$15,000</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>14,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/bmw-330ci-2003-59289/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2003 BMW 330ci</h3>
+                    <br>
+                    <h2>$4,990</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>114,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/chevrolet-silverado-2007-82829/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2007 Chevrolet Silverado 1500</h3>
+                    <br>
+                    <h2>$5,999</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>155,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/chrysler-300-2003-06392/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2003 Chrysler 300</h3>
+                    <br>
+                    <h2>$3,990</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>167,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/chrysler-sebring-2005-79281/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2005 Chrysler Sebring</h3>
+                    <br>
+                    <h2>$4,990</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>138,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/honda-odyssey-2004-32088/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2004 Honda Odyssey</h3>
+                    <br>
+                    <h2>$4,999</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>224,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/hyundai-accent-2019-92383/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2019 Hyundai Accent</h3>
+                    <br>
+                    <h2>$15,999</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>111,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="content">
+                    <img src="images/mercedes-e320-2005-38292/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2005 Mercedes E320</h3>
+                    <br>
+                    <h2>$6,599</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>162,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <img src="images/toyota-corolla-2005-89283/image-1.png" alt="vehicle" style="width:100%">
+                    <h3>2005 Toyota Corolla</h3>
+                    <br>
+                    <h2>$7,599</h2>
+                    <br>
+                    <p><span class="h3">Mileage:</span>162,000</p>
+                    <br>
+                    <button>
+                        <a href="/Inventory/Vehicle">Learn More</a>
+                    </button>
+                </div>
+            </div>
+
+
+          <!-- END GRID -->
+          </div>
+
+
+            
+        <!-- ============================================ -->
+        <!--                    FOOTER                    -->
+        <!-- ============================================ -->
+        <footer class="white bg-black">
+            <div class='flex flex-wrap justify-evenly footer'>
+                <div class="left-align">
+                <h3 class="primary">CONTACT US</h3>
+                <p>
+                    <span class="gray">PHONE:</span>
+                    <br />
+                    (555) 555-5555
+                </p>
+                <p>
+                    <span class="gray">EMAIL:</span>
+                    <br />
+                    <a href='https://www.google.com' class='white'>info@dealersite.com</a>
+                </p>
+                <p>
+                    <span class="gray">ADDRESS:</span>
+                    <br />
+                    123 Maple St.
+                    <br />
+                    Somewhere, SS 38382
+                </p>
+                </div>
+                <div class="left-align">
+                <h3 class="primary">OPENING HOURS</h3>
+                <p class="gray">(By appointment)</p>
+                <p>
+                    <span class="gray">MON: </span>
+                    9:00am - 5:30pm
+                    <br />
+                    <span class="gray">TUE: </span>
+                    9:00am - 5:30pm
+                    <br />
+                    <span class="gray">WED: </span>
+                    9:00am - 5:30pm
+                    <br />
+                    <span class="gray">THU: </span>
+                    9:00am - 5:30pm
+                    <br />
+                    <span class="gray">FRI: </span>
+                    9:00am - 5:30pm
+                    <br />
+                    <span class="gray">SAT: </span>
+                    9:00am - 5:30pm
+                    <br />
+                    <span class="gray">SUN: </span>
+                    CLOSED
+                    <br />
+                </p>
+                </div>
+                <div class="left-align">
+                <h3 class="primary">LINKS</h3>
+                <ul class="list-style-none">
+                    <li>
+                    <Link class="white" to="/home">HOME</Link>
+                    </li>
+                    <li>
+                    <Link class="white" to="/inventory">INVENTORY</Link>
+                    </li>
+                    <li>
+                    <Link class="white" to="/about">CONTACT</Link>
+                    </li>
+                    <li>
+                    <Link class="white" to="/contact">ABOUT</Link>
+                    </li>
+                </ul>
+                </div>
+                <div>
+                <h3 class="primary">SOCIAL MEDIA</h3>
+                <ul class="list-style-none">
+                    <li>
+                    <a  class="white" href="https://www.youtube.com">Youtube</a>
+                    </li>
+                    <li>
+                    <a  class="white" href="https://www.facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                    <a  class="white" href="https://www.instagram.com">Instagram</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
     
