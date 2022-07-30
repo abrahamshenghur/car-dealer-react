@@ -8,147 +8,6 @@
         <link rel="stylesheet" href="style.css">
 
         <script src="jquery-3.6.0.js"></script>
-
-        <style>
-            * {
-            box-sizing: border-box;
-            }
-
-            body {
-            background-color: #f1f1f1;
-            padding: 20px;
-            font-family: Arial;
-            }
-
-            /* Center website */
-            .main {
-            max-width: 1000px;
-            margin: auto;
-            }
-
-            /* h1 {
-            font-size: 50px;
-            word-break: break-all;
-            } */
-            h1 {
-                word-break: break-all;
-                color: #0c68b5;
-                font-size: 50px;
-                word-break: break-all;
-                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri','Trebuchet MS', 'sans-serif';
-            }
-            h2 {
-                word-break: break-all;
-                color: #0c68b5;
-                font-size: 30px;
-                word-break: break-all;
-                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri','Trebuchet MS', 'sans-serif';
-            }
-            h3 {
-                word-break: break-all;
-                /* color: #0c68b5; */
-                font-size: 20px;
-                word-break: break-all;
-                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri','Trebuchet MS', 'sans-serif';
-            }
-            .row {
-            margin: 8px -16px;
-            }
-
-            /* Add padding BETWEEN each column */
-            .row,
-            .row > .column {
-            padding: 8px;
-            }
-
-            /* Create four equal columns that floats next to each other */
-            .column {
-            float: left;
-            width: 25%;
-            }
-
-            /* Clear floats after rows */ 
-            .row:after {
-            content: "";
-            display: flex;
-            clear: both;
-            }
-
-            /* Content */
-            .content {
-            background-color: white;
-            padding: 10px;
-            }
-
-            /* Responsive layout - makes a two column-layout instead of four columns */
-            @media screen and (max-width: 900px) {
-            .column {
-                width: 50%;
-            }
-            }
-
-            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-            @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-            }
-            }
-            
-            #target {
-                max-width:100%;
-                width:600px;
-                margin:0 auto;
-            }
-            .image-list {
-                position:relative;
-                float: left;
-                display:inline;
-            }
-            .image-styles {
-                margin:15px;
-                -webkit-border-radius: 5px;
-                border-radius: 5px;
-            }
-            .image-title {
-                background:#000;
-                width:80%;
-                position:absolute;
-                bottom:15px;
-                left:15px;
-                color:#f7f7f7;
-                text-align:center;
-                padding:2px;
-                opacity:0.6;
-                filter:alpha(opacity=60);
-                /* For IE8 and earlier */
-            }
-
-            table {
-                margin: 0 auto;
-                font-size: large;
-                border: 1px solid black;
-            }
-      
-
-      
-            td {
-                background-color: #0c68b5;
-                border: 1px solid black;
-            }
-      
-            th,
-            td {
-                font-weight: bold;
-                border: 1px solid black;
-                padding: 10px;
-                text-align: center;
-            }
-      
-            td {
-                font-weight: lighter;
-                color: white;
-            }
-        </style>
     </head>
 
 
@@ -176,151 +35,14 @@
             </div>
         </header>
 
-        <div class="row">
+        <div>
             <h1>Inventory Page</h1>
             <p>All Vehicles For Sale</p>
         </div>
 
-        <!-- Vehicle Gallery Grid -->
-        <div class="row">
-            <div class="column">
-                <div class="content">
-                    <img src="images/mazda-rx8-2009-06548/image-1.JPG" alt="vehicle" style="width:100%">
-                    <h3>2009 Mazda RX-8</h3>
-                    <br>
-                    <h2>$15,000</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>14,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/bmw-330ci-2003-59289/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2003 BMW 330ci</h3>
-                    <br>
-                    <h2>$4,990</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>114,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/chevrolet-silverado-2007-82829/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2007 Chevrolet Silverado 1500</h3>
-                    <br>
-                    <h2>$5,999</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>155,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/chrysler-300-2003-06392/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2003 Chrysler 300</h3>
-                    <br>
-                    <h2>$3,990</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>167,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/chrysler-sebring-2005-79281/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2005 Chrysler Sebring</h3>
-                    <br>
-                    <h2>$4,990</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>138,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/honda-odyssey-2004-32088/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2004 Honda Odyssey</h3>
-                    <br>
-                    <h2>$4,999</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>224,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/hyundai-accent-2019-92383/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2019 Hyundai Accent</h3>
-                    <br>
-                    <h2>$15,999</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>111,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="column">
-                <div class="content">
-                    <img src="images/mercedes-e320-2005-38292/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2005 Mercedes E320</h3>
-                    <br>
-                    <h2>$6,599</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>162,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="content">
-                    <img src="images/toyota-corolla-2005-89283/image-1.png" alt="vehicle" style="width:100%">
-                    <h3>2005 Toyota Corolla</h3>
-                    <br>
-                    <h2>$7,599</h2>
-                    <br>
-                    <p><span class="h3">Mileage:</span>162,000</p>
-                    <br>
-                    <button>
-                        <a href="/Inventory/Vehicle">Learn More</a>
-                    </button>
-                </div>
-            </div>
-
-
-          <!-- END GRID -->
-          </div>
+        <div id="inventory-gallery" class="row">
+            <!-- Vehicle Gallery Grid -->
+        </div>
 
 
             
@@ -409,6 +131,53 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            let jsonArray = [];
+
+            $.getJSON("inventory.json", function(data) {
+                let inventoryGallery = document.querySelector("#inventory-gallery");
+
+                data.forEach(function(val) {
+                    var carFolder = val.image_url;
+                    jsonArray += carFolder
+                    sessionStorage.setItem("carFolder", carFolder);
+
+                    inventoryGallery.innerHTML +=`<div class="column">
+                                            <div class="content card">
+                                                <img src="${val.image_url}" alt="vehicle" style="width: 100%; height: 250px; object-fit: cover">
+                                                <h3>${val.Year} ${val.Make} ${val.Model}</h3>
+                                                <br>
+                                                <h2>${val.Price}</h2>
+                                                <br>
+                                                <p><span class="h3">Mileage: </span>${val.Mileage}</p>
+                                                <br>
+                                                <button>
+                                                    <a href="vehicle.html">Learn More</a>
+                                                </button>
+                                            </div>
+                                        </div>`;
+                });
+                                    console.log(jsonArray)
+
+            });
+        </script>
     </body>
 </html>
     
+
+<!--
+    [REF]: 
+
+    How to fetch data from JSON file and display in HTML table using jQuery ?
+    https://www.geeksforgeeks.org/how-to-fetch-data-from-json-file-and-display-in-html-table-using-jquery/
+
+    How To Display A List Of Images From A JSON Object With JavaScript
+    https://mclinteractive.com/web-development/how-to-display-a-list-of-images-from-a-json-object-into-the-dom/
+
+    Pass Javascript Variables to Another Page
+    https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
+
+
+
+-->

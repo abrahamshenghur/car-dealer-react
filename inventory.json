@@ -1,0 +1,74 @@
+[
+    {
+        "Year": "2009", 
+        "Make": "Mazda", 
+        "Model": "RX-8", 
+        "Price": "$15,000",
+        "Mileage": "34,400",
+        "image_url": "images/mazda-rx8-2009-06548/image-1.JPG"
+    },
+    {
+        "Year": "2003", 
+        "Make": "BMW", 
+        "Model": "330ci", 
+        "Price": "$4,990",
+        "Mileage": "114,000",
+        "image_url": "images/bmw-330ci-2003-59289/image-1.png"
+    },
+    {
+        "Year": "2007", 
+        "Make": "Chevrolet", 
+        "Model": "Silverado", 
+        "Price": "$5,999",
+        "Mileage": "155,000",
+        "image_url": "images/chevrolet-silverado-2007-82829/image-1.png"
+    },
+    {
+        "Year": "2003", 
+        "Make": "Chrysler", 
+        "Model": "300", 
+        "Price": "$3,990",
+        "Mileage": "167,000",
+        "image_url": "images/chrysler-300-2003-06392/image-1.png"
+    },
+    {
+        "Year": "2005", 
+        "Make": "Chrysler", 
+        "Model": "Sebring", 
+        "Price": "$4,990",
+        "Mileage": "138,000",
+        "image_url": "images/chrysler-sebring-2005-79281/image-1.png"
+    },
+    {
+        "Year": "2004", 
+        "Make": "Honda", 
+        "Model": "Odyssey", 
+        "Price": "$4,999",
+        "Mileage": "224,000",
+        "image_url": "images/honda-odyssey-2004-32088/image-1.png"
+    },
+    {
+        "Year": "2019", 
+        "Make": "Hyundai", 
+        "Model": "Accent", 
+        "Price": "$15,999",
+        "Mileage": "111,000",
+        "image_url": "images/hyundai-accent-2019-92383/image-1.png"
+    },
+    {
+        "Year": "2005", 
+        "Make": "Mercedes", 
+        "Model": "E320", 
+        "Price": "$6,599",
+        "Mileage": "162,000",
+        "image_url": "images/mercedes-e320-2005-38292/image-1.png"
+    },
+    {
+        "Year": "2005", 
+        "Make": "Toyota", 
+        "Model": "Corolla", 
+        "Price": "$7,599",
+        "Mileage": "162,000",
+        "image_url": "images/toyota-corolla-2005-89283/image-1.png"
+    }
+]
