@@ -50,28 +50,28 @@
 //----------------------------------------------------------------------------------------
 
 
-var imgArray = new Array(41);
+var imgArray = new Array(40);
 
-for (i=0; i<40; i++) {
+for (i=0; i<imgArray.length; i++) {
     imgArray[i] = new Image;
-    imgArray[i].src = './images/mazda-rx8-2009-06548/image-20.jpg';
+    imgArray[i].src = './images/mazda-rx8-2009-06548/image-' + [i] + '.jpg';
 
 }
 
-imgArray[0] = new Image();
-imgArray[0].src = './images/mazda-rx8-2009-06548/image-1.jpg';
+// imgArray[0] = new Image();
+// imgArray[0].src = './images/mazda-rx8-2009-06548/image-1.jpg';
 
-imgArray[1] = new Image();
-imgArray[1].src = './images/mazda-rx8-2009-06548/image-2.jpg';
+// imgArray[1] = new Image();
+// imgArray[1].src = './images/mazda-rx8-2009-06548/image-2.jpg';
 
-imgArray[2] = new Image();
-imgArray[2].src = './images/mazda-rx8-2009-06548/image-3.jpg';
+// imgArray[2] = new Image();
+// imgArray[2].src = './images/mazda-rx8-2009-06548/image-3.jpg';
 
-imgArray[3] = new Image();
-imgArray[3].src = './images/mazda-rx8-2009-06548/image-4.jpg';
+// imgArray[3] = new Image();
+// imgArray[3].src = './images/mazda-rx8-2009-06548/image-4.jpg';
 
-imgArray[4] = new Image();
-imgArray[4].src = './images/mazda-rx8-2009-06548/image-5.jpg';
+// imgArray[4] = new Image();
+// imgArray[4].src = './images/mazda-rx8-2009-06548/image-5.jpg';
 function nextImage(){
     var img = document.getElementById("mainImage");
     for (var i = 0; i < imgArray.length; i++) {
@@ -99,11 +99,11 @@ function previousImage(){
         }
     }
 }
-pix=new Array(10);
-for (i=0;i<10;i++){
-    pix[i]=new Image;
-    pix[i].src="r/r"+(i+1)+".jpg";
-}
+// pix=new Array(10);
+// for (i=0;i<10;i++){
+//     pix[i]=new Image;
+//     pix[i].src="r/r"+(i+1)+".jpg";
+// }
 
 /*
     [REF]: 
