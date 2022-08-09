@@ -46,6 +46,15 @@
                 background-color:  rgb(12, 104, 181, 1.0)
             }
             
+            #numbertext {
+                color: white;
+                background-color:  rgb(12, 104, 181, 0.6);
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 90;
+            }
+
             .column {
                 float: left;
                 width: 16.66%;
@@ -87,7 +96,8 @@
         <button onclick="nextImage()">Next Image</button> -->
 
         <div id="splash">
-            <img src="./images/mazda-rx8-2009-06548/image-1.jpg" alt="image-1" id="mainImage">
+            <div id="numbertext"></div>
+            <img  id="mainImage">
         </div> 
         <div id="controls">
             <a class="prev" onclick="previousImage()">❮</a>
@@ -218,25 +228,34 @@
             
             // doPortItem(1)
 
-            var carFolder = sessionStorage.getItem("carFolder");
-            console.log("VHEKCLE", carFolder);
+            
+            var imgArray = new Array(41);
 
             const folder = "images/mazda-rx8-2009-06548/image-";
-            const maxImages = 41; // Arbitrary large number; should get item count, otherwise it prints alt image txt up to set #
+
+            for (i=0; i<imgArray.length; i++) {
+                imgArray[i] = new Image;
+                imgArray[i].src = folder + [i] + '.jpg';
+            }
+
+            var carFolder = sessionStorage.getItem("carFolder");
+
+            const maxImages = 40; // Arbitrary large number; should get item count, otherwise it prints alt image txt up to set #
             const suffix = ["jpg", "jpeg", "png"];
             
-            let cnt = 0, idx = 0, vehicleGallery, img;  // if idx = 0, it won't show images
+            let cnt = 0, idx = 1, vehicleGallery, img;  // if idx = 0, it won't show images
 
+            document.getElementById("mainImage").src = folder + idx + "." + suffix[0];
 
             const loadImage = () => {
-                if (idx >= maxImages) return;
+                if (idx > maxImages) return;
                 if (cnt === 0) img = new Image();
 
                 img.src = folder + idx + "." + suffix[cnt];  // !!!Need to check for other file extensions
 
                 img.onload = function () {
                     let div =  `<div class="column" style="padding: 2px">
-                                    <img src="${img.src}" alt="vehicle" style="object-fit: cover">
+                                    <img id="image-${idx}" src="${img.src}" alt="vehicle" style="object-fit: cover" onClick="currentSlide(${idx})">
                                 </div>`;
                     vehicleGallery.innerHTML += div;
                     // vehicleGallery.appendChild(saveImg); This doesn't have CSS applied like the div above
@@ -260,11 +279,16 @@
                     loadImage();
                 }
 
-                console.log("6  trying to load", folder + idx + "." + suffix[cnt]);
+                console.log("6  trying to load", folder, idx, "." + suffix[cnt]);
 
 
             }
             
+            function currentSlide(idx) {
+                console.log("CURRENT SLIDE", idx)
+                document.getElementById("mainImage").src = imgArray[idx].src;
+                updateImageCounter(idx);
+            }
  
             window.addEventListener("load", function () {
                 console.log("1  addEventListener");
@@ -272,7 +296,9 @@
                 vehicleGallery = document.getElementById("vehicle-gallery");
                 
                 loadImage();
-                
+
+                updateImageCounter(idx)
+
                 img.addEventListener('load', () => {
                     console.log("2  img.addEventListener");
 
@@ -288,6 +314,57 @@
                 })
             });
 
+            let numberTxt = document.getElementById("numbertext");
+
+
+            function updateImageCounter(idx) {
+                numberTxt.innerHTML = `${idx} / ${maxImages}`;
+            }
+
+
+            function nextImage(){
+                var img = document.getElementById("mainImage");
+                
+                for (var i = 0; i < imgArray.length; i++) {
+                    // numberTxt.innerHTML = `${i} / ${maxImages}`;
+
+                    if (imgArray[i].src == img.src){
+                        if(i === imgArray.length){
+                            document.getElementById("mainImage").src = imgArray[0].src;
+                            break;
+                        }
+
+                        document.getElementById("mainImage").src = imgArray[i+1].src;
+                        updateImageCounter(i+1);
+
+                        break;
+                    }
+                }
+            }
+
+
+            function previousImage(){
+                var img = document.getElementById("mainImage");
+                
+                for (var i = imgArray.length-1; i >=0; i--) {
+                    numberTxt.innerHTML = `${i} / ${maxImages}`;
+
+                    if (imgArray[i].src == img.src) {
+                        if(i === imgArray.length){
+                            document.getElementById("mainImage").src = imgArray[0].src;
+                            break;
+                        }
+
+                        document.getElementById("mainImage").src = imgArray[i-1].src;
+                        updateImageCounter(i-1);
+
+                        break;
+                    }
+                }
+
+                console.log(numberTxt);
+
+            }
             
         </script>
     </body>

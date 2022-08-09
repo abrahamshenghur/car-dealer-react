@@ -50,13 +50,14 @@
 //----------------------------------------------------------------------------------------
 
 
-var imgArray = new Array(40);
+// var imgArray = new Array(41);
+// const folder = "images/mazda-rx8-2009-06548/image-";
 
-for (i=0; i<imgArray.length; i++) {
-    imgArray[i] = new Image;
-    imgArray[i].src = './images/mazda-rx8-2009-06548/image-' + [i] + '.jpg';
+// for (i=0; i<imgArray.length; i++) {
+//     imgArray[i] = new Image;
+//     imgArray[i].src = folder + [i] + '.jpg';
 
-}
+// }
 
 // imgArray[0] = new Image();
 // imgArray[0].src = './images/mazda-rx8-2009-06548/image-1.jpg';
@@ -72,33 +73,35 @@ for (i=0; i<imgArray.length; i++) {
 
 // imgArray[4] = new Image();
 // imgArray[4].src = './images/mazda-rx8-2009-06548/image-5.jpg';
-function nextImage(){
-    var img = document.getElementById("mainImage");
-    for (var i = 0; i < imgArray.length; i++) {
-        if (imgArray[i].src == img.src){
-            if(i === imgArray.length){
-                document.getElementById("mainImage").src = imgArray[0].src;
-                break;
-            }
-            document.getElementById("mainImage").src = imgArray[i+1].src;
-            break;
-        }
-    }
-}
 
-function previousImage(){
-    var img = document.getElementById("mainImage");
-    for (var i = imgArray.length-1; i >=0; i--) {
-        if (imgArray[i].src == img.src){
-            if (i === imgArray.length) {
-                document.getElementById("mainImage").src = imgArray[4].src;
-                break;
-            }
-            document.getElementById("mainImage").src = imgArray[i-1].src;
-            break;
-        }
-    }
-}
+// function nextImage(){
+//     var img = document.getElementById("mainImage");
+//     for (var i = 0; i < imgArray.length; i++) {
+//         if (imgArray[i].src == img.src){
+//             if(i === imgArray.length){
+//                 document.getElementById("mainImage").src = imgArray[0].src;
+//                 break;
+//             }
+//             document.getElementById("mainImage").src = imgArray[i+1].src;
+//             break;
+//         }
+//     }
+// }
+
+// function previousImage(){
+//     var img = document.getElementById("mainImage");
+//     for (var i = imgArray.length-1; i >=0; i--) {
+//         if (imgArray[i].src == img.src){
+//             if (i === imgArray.length) {
+//                 document.getElementById("mainImage").src = imgArray[4].src;
+//                 break;
+//             }
+//             document.getElementById("mainImage").src = imgArray[i-1].src;
+//             break;
+//         }
+//     }
+// }
+
 // pix=new Array(10);
 // for (i=0;i<10;i++){
 //     pix[i]=new Image;
