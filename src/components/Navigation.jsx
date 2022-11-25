@@ -3,40 +3,27 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
     return (
-        <div className="navigation">
-            <nav className="navbar navbar-expand navbar-dark bg-dark">
-                <div className="container">
-                    <NavLink className="navbar-brand" to="/">
-                        Car Dealer Website
-                    </NavLink>
-                    <div>
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/">
-                                    Home
-                                    <span className="sr-only">(current)</span>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/inventory">
-                                    Inventory
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/about">
-                                    About
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/contact">
-                                    Contact
-                                </NavLink>
-                            </li>
-                        </ul>
+        <header className="bg-primary">
+            <div className="flex flex-column">
+                <div className="secondary">
+                    <div className="left">
+                        <NavLink to="/">
+                            <img style={{height: "50px"}} src={ require('../images/logos/logo-1.jpg') }/>
+                        </NavLink>
                     </div>
+                    <div className="right">Contact</div>
+                    <div className="right">Social Media</div>
                 </div>
-            </nav>
-        </div>
+                <div className="bg-secondary">
+                    <ul className="flex justify-around list-style-none h3 caps">
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/inventory">Inventory</NavLink></li>
+                        <li><NavLink to="/about">Contact</NavLink></li>
+                        <li><NavLink to="/about">About</NavLink></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
     );
 }
 
