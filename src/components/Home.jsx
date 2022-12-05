@@ -19,15 +19,15 @@ function Home() {
                 <div class="flex flex-wrap justify-around h2 secondary" >
                     <div class="clickable-container bg-image-overlay thumbnail-image-1">
                         OUR STORY
-                        <a href="/about.html"><span class="link layer"></span></a>
+                        <a href="/about"><span class="link layer"></span></a>
                     </div>
                     <div class="clickable-container bg-image-overlay thumbnail-image-2">
                         INVENTORY
-                        <a href="/inventory.html"><span class="link layer"></span></a>
+                        <a href="/inventory"><span class="link layer"></span></a>
                     </div>
                     <div class="clickable-container bg-image-overlay thumbnail-image-3">
                         TRADE-IN
-                        <a href="/trade-in.html"><span class="link layer"></span></a>
+                        <a href="/trade-in"><span class="link layer"></span></a>
                     </div>
                 </div>
             </section>
@@ -42,7 +42,7 @@ function Home() {
                         <p>
                             San J Motors strives to offer you the fairest deal on your trade-in. We will call or email you to schedule an appointment to inspect your vehicle and make you an offer. We pride ourselves on our friendly sales and support staff and will always treat you and your vehicle with respect.
                         </p>
-                        <button class="bg-primary">
+                        <button onClick={window['alertHello']} class="bg-primary">
                             <a class= "secondary"  href="/trade-in.html">TRADE-IN</a>
                         </button>
                     </div>
