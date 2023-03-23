@@ -6,38 +6,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inventory | San J Motors</title>
         <link rel="stylesheet" href="style.css">
-
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="jquery-3.6.0.js"></script>
     </head>
 
 
     <body class="wrapper">
-        <header class="bg-primary">
-            <div class="flex flex-column">
-                <div class="secondary">
-                    <div class="left">
-                        <a href="index.html">
-                            <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
-                        </a>
+        <header class="header">
+            <div class="overlay" ></div>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-list">
+                        <li>
+                            <a href="mailto:info@dealersite.com" class="header-top-link">
+                                <i class="fa fa-envelope"></i><span>info@dealersite.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-top-link">
+                                <i class="fa fa-map-marker"></i><span>123 Maple St., Somewhere, SS 38382</span>
+                            </a>
+                        </li>
                     </div>
-                    <div class="right">Contact</div>
-                    <div class="right">Social Media</div>
                 </div>
-                <div class="bg-secondary">
-                    <ul class="flex justify-around list-style-none h3 caps">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="inventory.html">Inventory</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <a href="index.html">
+                        <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                    </a>
+                    <nav>
+                        <div class="toggle-menu" id="toggle__menu">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <ul class="nav-list" id="nav__menu">
+                            <div class="nav-sidebar-top">
+                                <a href="#">
+                                    <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                                </a>
+                                <div class="close-menu" id="close__menu">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        </ul>
+                    </nav>
                 </div>
-        
             </div>
         </header>
 
-        <div>
-            <h1>Inventory Page</h1>
-            <p>All Vehicles For Sale</p>
+        <div class="line-through-h1">
+            <h1><span>Current Inventory</span></h1>
         </div>
 
         <div id="inventory-gallery" class="row">
@@ -49,88 +71,105 @@
         <!-- ============================================ -->
         <!--                    FOOTER                    -->
         <!-- ============================================ -->
-        <footer class="white bg-black">
-            <div class='flex flex-wrap justify-evenly footer'>
-                <div class="left-align">
-                <h3 class="primary">CONTACT US</h3>
-                <p>
-                    <span class="gray">PHONE:</span>
-                    <br />
-                    (555) 555-5555
-                </p>
-                <p>
-                    <span class="gray">EMAIL:</span>
-                    <br />
-                    <a href='https://www.google.com' class='white'>info@dealersite.com</a>
-                </p>
-                <p>
-                    <span class="gray">ADDRESS:</span>
-                    <br />
-                    123 Maple St.
-                    <br />
-                    Somewhere, SS 38382
-                </p>
+        <footer>
+            <div class="footer-top">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <a class="logo" href="index.html">
+                                <img style="height: 30px" src="images/logos/logo-1-no-background.jpg" ></img>
+                            </a>
+                            <p class="section-text">
+                                Find your next vehicle here with us. We provide many vehicles that can suit your needs at an affordable price.
+                            </p>
+                        </div>
+                        <ul class="contact-list">
+                            <li><i class="fa fa-phone gray"></i><span> (555) 555-5555</span></li>
+                            <li><i class="fa fa-map-marker gray"></i><span> 123 Maple St., Somewhere, SS 38382</span></li>
+                            <li><i class="fa fa-envelope gray"></i><span> info@dealersite.com</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content">
+                        <h3 class="primary">OPENING HOURS</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>MON:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>TUE:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>WED:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>THU:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>FRI:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>SAT:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>SUN:</th>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer-content">
+                        <div class="links">
+                            <h3 class="primary">LINKS</h3>
+                            <ul>
+                                <li><a class="white" href="index.html">Home</a></li>
+                                <li><a class="white" href="inventory.html">Inventory</a></li>
+                                <li><a class="white" href="contact.html">Contact</a></li>
+                                <li><a class="white" href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-content">
+                        <h3 class="primary">SOCIAL MEDIA</h3>
+                        <ul class="social-list">
+                            <li><a class="white" href="https://www.youtube.com"><i class="fa fa-youtube gray"></i></a></li>
+                            <li><a class="white" href="https://www.facebook.com"><i class="fa fa-facebook gray"></i></a></li>
+                            <li><a class="white" href="https://www.instagram.com"><i class="fa fa-instagram gray"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="left-align">
-                <h3 class="primary">OPENING HOURS</h3>
-                <p class="gray">(By appointment)</p>
-                <p>
-                    <span class="gray">MON: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">TUE: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">WED: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">THU: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">FRI: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">SAT: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">SUN: </span>
-                    CLOSED
-                    <br />
-                </p>
-                </div>
-                <div class="left-align">
-                <h3 class="primary">LINKS</h3>
-                <ul class="list-style-none">
-                    <li>
-                    <Link class="white" to="/home">HOME</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/inventory">INVENTORY</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/about">CONTACT</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/contact">ABOUT</Link>
-                    </li>
-                </ul>
-                </div>
-                <div>
-                <h3 class="primary">SOCIAL MEDIA</h3>
-                <ul class="list-style-none">
-                    <li>
-                    <a  class="white" href="https://www.youtube.com">Youtube</a>
-                    </li>
-                    <li>
-                    <a  class="white" href="https://www.facebook.com">Facebook</a>
-                    </li>
-                    <li>
-                    <a  class="white" href="https://www.instagram.com">Instagram</a>
-                    </li>
-                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="copyright">
+                        © 2022 <a href="#">webmoapps.com</a>. All Rights Reserved
+                    </p>
                 </div>
             </div>
         </footer>
+
+        <script>
+            const navMenu = document.getElementById("nav__menu"),
+            toggleMenu = document.getElementById("toggle__menu"),
+            closeMenu = document.getElementById("close__menu"),
+            overlay = document.querySelector(".overlay")
+
+            toggleMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("show-menu");
+                overlay.classList.toggle("active");
+            })
+
+            closeMenu.addEventListener("click", () => {
+                navMenu.classList.remove("show-menu");
+                overlay.classList.remove("active");
+            })
+        </script>
 
         <script>
             let jsonArray = [];
@@ -144,17 +183,21 @@
                     sessionStorage.setItem("carFolder", carFolder);
 
                     inventoryGallery.innerHTML +=`<div class="column">
-                                            <div class="content card">
-                                                <img src="${val.image_url}" alt="vehicle" style="width: 100%; height: 250px; object-fit: cover">
-                                                <h3>${val.Year} ${val.Make} ${val.Model}</h3>
+                                            <div class="content card" style="padding-bottom: 20px">
+                                                <img src="${val.image_url}" alt="vehicle" style="width: 100%; height: 250px; padding-bottom: 10px; object-fit: cover">
+                                                <div style="height: 55px">
+                                                    <h2>${val.Year} ${val.Make} ${val.Model}</h2>
+                                                </div>
                                                 <br>
-                                                <h2>${val.Price}</h2>
+                                                <h2 class="primary">${val.Price}</h2>
                                                 <br>
                                                 <p><span class="h3">Mileage: </span>${val.Mileage}</p>
                                                 <br>
-                                                <button>
-                                                    <a href="vehicle.html">Learn More</a>
-                                                </button>
+                                                <a href="vehicle.html">
+                                                    <button class="btn btn-blue">
+                                                        Learn More
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>`;
                 });

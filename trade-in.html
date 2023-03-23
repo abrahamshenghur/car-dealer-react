@@ -1,12 +1,1025 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade-In | San J Motors</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>TRADE-IN</h1>
+
+<body class="wrapper">
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-list">
+                    <li>
+                        <a href="mailto:info@dealersite.com" class="header-top-link">
+                            <i class="fa fa-envelope"></i><span>info@dealersite.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-top-link">
+                            <i class="fa fa-map-marker"></i><span>123 Maple St., Somewhere, SS 38382</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <a href="index.html">
+                    <img style="height: 50px" src="images/logos/logo-1.jpg"></img>
+                </a>
+                <nav>
+                    <div class="toggle-menu" id="toggle__menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <ul class="nav-list" id="nav__menu">
+                        <div class="nav-sidebar-top">
+                            <a href="#">
+                                <img style="height: 50px" src="images/logos/logo-1.jpg"></img>
+                            </a>
+                            <div class="close-menu" id="close__menu">
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container bg-white">
+
+            <div id="ContentPane" class="s45r_tert clearfix">
+
+                <div class="ContentPane_1081863 ResponsiveTrade ResponsiveTrade_1081863">
+                    <div id="ResponsiveTradeFormWrapper" class="tradeFormWrapper">
+                        <div class="form-intro p2" style="line-height: 30px; font-size: 20px">
+                            <h2>We Will Buy Your Vehicle Today.</h2>
+                            <br>
+                            <h4>Are You're driving a car that you don't really love and want to trade it in?</h4>
+                            <br>
+                            <p>
+                                Bring your car into our dealership and we will give you an instant offer.
+                                <br>
+                                We want your vehicle and we will pay you top dollar to put it toward a <strong>car,
+                                    truck or SUV</strong>.
+                                <br>
+                                <br>
+                                Call or visit today!
+                            </p>
+                            <br>
+                            <p><a class="btn" href="trade">Value Your Trade</a></p> <!-- Tag needs proper use -->
+                        </div>
+                        <form class="p2" id="ResponsiveTradeForm" data-ajax="true" data-ajax-method="post"
+                            data-ajax-mode="replace-with" data-ajax-update="#ResponsiveTradeFormWrapper"
+                            data-ajax-success="redirect('')" data-ajax-failure="ajaxFailure"
+                            data-ajax-loading="#ResponsiveTradeFormSpinner"
+                            data-ajax-begin="$('#ResponsiveTradeFormButton').prop('disabled',true);formLeadTrackingByElementId('#TradeInventoryId', '', 'Responsive Trade Form');"
+                            data-ajax-complete="$('#ResponsiveTradeFormButton').prop('disabled',false);"
+                            data-recaptcha-id="ResponsiveTradeRecaptchaToken" data-recaptcha-site-key=""
+                            data-recaptcha-type="Undefined"
+                            action="/LeadModule/ResponsiveTradeSubmitForm?pagename=trade&amp;modulename=ResponsiveTradeForm"
+                            method="post" novalidate="novalidate">
+
+                            <div class="">
+                                <div class="flex flex-wrap justify-between">
+                                    <div class=" form-group">
+                                        <label id="lblFirstName" for="FirstName">First Name:</label>
+                                        <input type="text" aria-labelledby="lblFirstName" id="txtFirstName"
+                                            class="form-control" name="FirstName" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="FirstName"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class=" form-group">
+                                        <label id="lblLastName" for="LastName">Last Name:</label>
+                                        <input type="text" aria-labelledby="lblLastName" id="txtLastName"
+                                            class="form-control" name="LastName" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="LastName"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="lblMobilePhone" for="MobilePhone">Mobile Phone:</label>
+                                        <input type="tel" aria-labelledby="lblMobilePhone" id="txtMobilePhone"
+                                            class="form-control" data-val="true" data-val-regex="ex. ###-###-####"
+                                            data-val-regex-pattern="^\([0-9]{3}\)\s?[0-9]{3}(-|\s)?[0-9]{4}$|^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$"
+                                            name="MobilePhone" placeholder="###-###-####" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="MobilePhone"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="lblHomePhone" for="HomePhone">Home Phone:</label>
+                                        <input type="tel" aria-labelledby="lblHomePhone" id="txtHomePhone"
+                                            class="form-control" data-val="true" data-val-regex="ex. ###-###-####"
+                                            data-val-regex-pattern="^\([0-9]{3}\)\s?[0-9]{3}(-|\s)?[0-9]{4}$|^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$"
+                                            name="HomePhone" placeholder="###-###-####" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="HomePhone"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblEmail" for="Email">Email:</label>
+                                        <input type="email" aria-labelledby="lblEmail" id="txtEmail"
+                                            class="form-control" data-val="true"
+                                            data-val-required="The Email field is required." name="Email"
+                                            placeholder="example@example.com" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Email"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="lblvehicleOfInterest" for="InventoryId">Vehicle of Interest:</label>
+                                        <div class="input-group">
+                                            <select class="form-control" id="vehicleOfInterest"
+                                                aria-labelledby="lblvehicleOfInterest" name="InventoryId">
+                                                <option value=""></option>
+                                                <option value="19284746">2021 Toyota Tacoma 2WD SR5 Double Cab 5' Bed V6
+                                                    AT (Natl) - 22134#</option>
+                                                <option value="19400077">2018 Chrysler 300 300S RWD - 22192#</option>
+                                                <option value="19442553">2017 Nissan Titan XD 4x4 Diesel Crew Cab PRO-4X
+                                                    - 22193#</option>
+                                                <option value="19650715">2017 Mitsubishi Lancer ES 2.0 FWD CVT - 22218#
+                                                </option>
+                                                <option value="19796934">2017 Jeep Wrangler Unlimited Big Bear 4x4 *Ltd
+                                                    Avail* - 23042#</option>
+                                                <option value="19421600">2017 Ford F-150 XLT 4WD SuperCrew 5.5' Box -
+                                                    22190#</option>
+                                                <option value="19479873">2017 Ford Expedition XLT 4x2 - 22213#</option>
+                                                <option value="19543625">2017 Dodge Charger SXT RWD - 22224#</option>
+                                                <option value="19697467">2016 Toyota Corolla 4dr Sdn CVT S Plus (Natl) -
+                                                    23024#</option>
+                                                <option value="19400106">2016 Subaru BRZ 2dr Cpe Limited Man - 22187#
+                                                </option>
+                                                <option value="19626772">2016 RAM 1500 4WD Quad Cab 140.5" Tradesman -
+                                                    22227#</option>
+                                                <option value="19559274">2016 Kia Soul EV 5dr Wgn - 22232#</option>
+                                                <option value="19459835">2016 Honda Accord Sedan 4dr I4 CVT Sport -
+                                                    22194#</option>
+                                                <option value="19723291">2016 Chevrolet Silverado 1500 2WD Crew Cab
+                                                    143.5" LT w/1LT - 23029#</option>
+                                                <option value="19213174">2015 Toyota Corolla 4dr Sdn CVT LE (Natl) -
+                                                    22147#</option>
+                                                <option value="19723313">2015 Subaru Impreza Wagon 5dr CVT 2.0i Sport
+                                                    Premium - 23023#</option>
+                                                <option value="19579498">2015 Mitsubishi Lancer 4dr Sdn CVT GT FWD -
+                                                    22229#</option>
+                                                <option value="19796709">2015 Hyundai Elantra GT 5dr HB Auto - 23040#
+                                                </option>
+                                                <option value="19823235">2015 Dodge Challenger 2dr Cpe SXT - 23054#
+                                                </option>
+                                                <option value="19796874">2015 Chevrolet Suburban 2WD 4dr LT - 23050#
+                                                </option>
+                                                <option value="19796840">2014 Toyota Camry 2014.5 4dr Sdn I4 Auto SE
+                                                    Sport (Natl) - 23043#</option>
+                                                <option value="19603287">2014 Scion xB 5dr Wgn Auto Release Series 10.0
+                                                    (Natl) - 23006#</option>
+                                                <option value="19603217">2014 Scion tC 2dr HB Auto (Natl) - 23004#
+                                                </option>
+                                                <option value="19650509">2013 Nissan Frontier 4WD Crew Cab SWB Auto SV -
+                                                    23002#</option>
+                                                <option value="19822354">2013 Kia Forte Koup 2dr Cpe Auto SX - 23045#
+                                                </option>
+                                                <option value="19822420">2013 Jeep Wrangler Unlimited 4WD 4dr Sport -
+                                                    23039#</option>
+                                                <option value="19674329">2013 Chevrolet Silverado 1500 2WD Reg Cab
+                                                    119.0" LT - 23016#</option>
+                                                <option value="19745056">2012 RAM 1500 2WD Reg Cab 120.5" Express -
+                                                    23033#</option>
+                                                <option value="19796607">2012 Jeep Wrangler Unlimited 4WD 4dr Sport -
+                                                    23044#</option>
+                                                <option value="18800940">2012 Ford Explorer FWD 4dr XLT - 22073#
+                                                </option>
+                                                <option value="19723420">2012 Ford Escape FWD 4dr XLT - 22142A#</option>
+                                                <option value="19697657">2012 Dodge Charger 4dr Sdn Police RWD - 22155#
+                                                </option>
+                                                <option value="19122861">2012 Buick LaCrosse 4dr Sdn Premium 1 FWD -
+                                                    22122#</option>
+                                                <option value="19697545">2011 Toyota Tundra 2WD Truck Dbl 4.6L V8 6-Spd
+                                                    AT (Natl) - 23019#</option>
+                                                <option value="19772934">2011 Hyundai Genesis Coupe 2dr 3.8L Auto Grand
+                                                    Touring w/Blk Lth - 23037#</option>
+                                                <option value="19579680">2010 Jeep Wrangler Unlimited 4WD 4dr Sport -
+                                                    22221#</option>
+                                                <option value="19284629">2010 GMC Sierra 1500 2WD Crew Cab 143.5" SLE -
+                                                    22153#</option>
+                                                <option value="19745207">2010 Dodge Challenger 2dr Cpe SE - 23035#
+                                                </option>
+                                                <option value="19772984">2010 Chevrolet Camaro 2dr Cpe 1SS - 23032#
+                                                </option>
+                                                <option value="19650562">2008 Chevrolet Silverado 1500 2WD Reg Cab
+                                                    119.0" Work Truck - 23003#</option>
+                                                <option value="19579455">2007 Chevrolet Corvette 2dr Cpe - 22165#
+                                                </option>
+                                                <option value="19626642">2005 Dodge Ram SRT-10 4dr Quad Cab 140.5" WB -
+                                                    22212A#</option>
+                                                <option value="19169618">2005 Chevrolet Corvette 2dr Convertible -
+                                                    22146#</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text" id="basic-addon1"><small><a
+                                                            href="https://www.riversidecarstore.net/newandusedcars"
+                                                            target="_blank" rel="noopener"
+                                                            title="View All Inventory">View All</a></small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="mt-4"><strong>Enter Vehicle Information:</strong></label>
+
+                                    <div class="col-12">
+                                        <label id="lblVin" for="Vin">VIN:</label>
+                                        <input type="text" aria-labelledby="lblVin" id="txtVin" class="form-control"
+                                            data-val="true"
+                                            data-val-length="The field VIN must be a string with a minimum length of 17 and a maximum length of 17."
+                                            data-val-length-max="17" data-val-length-min="17" maxlength="17" name="Vin"
+                                            value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Vin"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblYear" for="VehicleYear">Year:</label>
+                                        <select class="form-control" id="ddlYear" aria-labelledby="lblYear"
+                                            data-val="true" data-val-required="The Year field is required."
+                                            name="VehicleYear">
+                                            <option value=""></option>
+                                            <option value="2024">2024</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2000">2000</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1990">1990</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1988">1988</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1980">1980</option>
+                                            <option value="1979">1979</option>
+                                            <option value="1978">1978</option>
+                                            <option value="1977">1977</option>
+                                            <option value="1976">1976</option>
+                                            <option value="1975">1975</option>
+                                            <option value="1974">1974</option>
+                                            <option value="1973">1973</option>
+                                            <option value="1972">1972</option>
+                                            <option value="1971">1971</option>
+                                            <option value="1970">1970</option>
+                                            <option value="1969">1969</option>
+                                            <option value="1968">1968</option>
+                                            <option value="1967">1967</option>
+                                            <option value="1966">1966</option>
+                                            <option value="1965">1965</option>
+                                            <option value="1964">1964</option>
+                                            <option value="1963">1963</option>
+                                            <option value="1962">1962</option>
+                                            <option value="1961">1961</option>
+                                            <option value="1960">1960</option>
+                                            <option value="1959">1959</option>
+                                            <option value="1958">1958</option>
+                                            <option value="1957">1957</option>
+                                            <option value="1956">1956</option>
+                                            <option value="1955">1955</option>
+                                            <option value="1954">1954</option>
+                                            <option value="1953">1953</option>
+                                            <option value="1952">1952</option>
+                                            <option value="1951">1951</option>
+                                            <option value="1950">1950</option>
+                                            <option value="1949">1949</option>
+                                            <option value="1948">1948</option>
+                                            <option value="1947">1947</option>
+                                            <option value="1946">1946</option>
+                                            <option value="1945">1945</option>
+                                            <option value="1944">1944</option>
+                                            <option value="1943">1943</option>
+                                            <option value="1942">1942</option>
+                                            <option value="1941">1941</option>
+                                            <option value="1940">1940</option>
+                                            <option value="1939">1939</option>
+                                            <option value="1938">1938</option>
+                                            <option value="1937">1937</option>
+                                            <option value="1936">1936</option>
+                                            <option value="1935">1935</option>
+                                            <option value="1934">1934</option>
+                                            <option value="1933">1933</option>
+                                            <option value="1932">1932</option>
+                                            <option value="1931">1931</option>
+                                            <option value="1930">1930</option>
+                                            <option value="1929">1929</option>
+                                            <option value="1928">1928</option>
+                                            <option value="1927">1927</option>
+                                            <option value="1926">1926</option>
+                                            <option value="1925">1925</option>
+                                            <option value="1924">1924</option>
+                                        </select>
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="VehicleYear"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblMake" for="VehicleMake">Make:</label>
+                                        <input type="text" aria-labelledby="lblMake" id="txtMake" class="form-control"
+                                            data-val="true" data-val-required="The Make field is required."
+                                            name="VehicleMake" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="VehicleMake"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblModel" for="VehicleModel">Model:</label>
+                                        <input type="text" aria-labelledby="lblModel" id="txtModel" class="form-control"
+                                            data-val="true" data-val-required="The Model field is required."
+                                            name="VehicleModel" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="VehicleModel"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblTrim" for="Trim">Trim:</label>
+                                        <input type="text" aria-labelledby="lblTrim" id="txtTrim" class="form-control"
+                                            data-val="true" data-val-required="The Trim field is required." name="Trim"
+                                            value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Trim"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblEngine" for="Cylinders">Cylinders:</label>
+                                        <input type="number" min="0" aria-labelledby="lblEngine" minlength="1"
+                                            maxlength="2" id="txtEngine" class="form-control" data-val="true"
+                                            data-val-required="The Cylinders field is required." name="Cylinders"
+                                            value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Cylinders"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblMileage" for="Mileage">Mileage:</label>
+                                        <input type="number" min="0" aria-labelledby="lblMileage" step="5000"
+                                            id="txtMileage" class="form-control" data-val="true"
+                                            data-val-required="The Mileage field is required." name="Mileage" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Mileage"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblTransmission" for="Transmission">Transmission:</label>
+                                        <input type="text" aria-labelledby="lblTransmission" id="txtTransmission"
+                                            class="form-control" data-val="true"
+                                            data-val-required="The Transmission field is required." name="Transmission"
+                                            value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Transmission"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblColor" for="Color">Color:</label>
+                                        <input type="text" aria-labelledby="lblColor" id="txtColor" class="form-control"
+                                            data-val="true" data-val-required="The Color field is required."
+                                            name="Color" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Color"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblFinanced" for="Financed">Financed:</label>
+                                        <input type="text" aria-labelledby="lblFinanced" id="txtFinanced"
+                                            class="form-control" data-val="true"
+                                            data-val-required="The Financed field is required." name="Financed"
+                                            value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Financed"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="lblFinanceWith" for="FinanceWithWhom">Finance with Whom:</label>
+                                        <input type="text" aria-labelledby="lblFinanceWith" id="txtFinanceWith"
+                                            class="form-control" name="FinanceWithWhom" value="">
+                                        <span class="text-danger field-validation-valid"
+                                            data-valmsg-for="FinanceWithWhom" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="lblPayoff" for="PayoffAmount">Pay off Amount:</label>
+                                        <input type="number" min="0" aria-labelledby="lblPayoff" step="1000"
+                                            id="txtPayoff" class="form-control" data-val="true"
+                                            data-val-regex="ex. 10500 or 10,500." data-val-regex-pattern="^[0-9.,]*$"
+                                            name="PayoffAmount" placeholder="ex. 10500 or 10,500" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="PayoffAmount"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group required-asterisk">
+                                        <label id="lblWrecked" for="Wrecked">Wrecked:</label>
+                                        <input type="text" aria-labelledby="lblWrecked" id="txtWrecked"
+                                            class="form-control" data-val="true"
+                                            data-val-required="The Wrecked field is required." name="Wrecked" value="">
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Wrecked"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="none">
+                                <label id="lbvehicleOptions" for="SelectedOptions"><strong>Vehicle
+                                        Options:</strong></label>
+                            </div>
+                            <div class="flex flex-wrap check-vehicle-options">
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions" value="4X4">4X4
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Adjustable Pedals">Adjustable Pedals
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Air Conditioning">Air Conditioning
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Airconditioned Seats">Airconditioned Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Alarm System">Alarm System
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Alloy Wheels">Alloy Wheels
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="AM/FM">AM/FM
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Anti-Lock Brakes">Anti-Lock Brakes
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Auto Climate Control">Auto Climate Control
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Back Up Sonar">Back Up Sonar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Bed Cover">Bed Cover
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Bedliner">Bedliner
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Bucket Seats">Bucket Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions" value="CD">CD
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="CD Changer">CD Changer
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Convertible Top">Convertible Top
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Cruise Control">Cruise Control
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Diesel">Diesel
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Driver Airbag">Driver Airbag
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Extra Cab">Extra Cab
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Fog Lights">Fog Lights
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Heated Seats">Heated Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Keyless Entry">Keyless Entry
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Leather Seats">Leather Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Luggage Rack">Luggage Rack
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Memory Seats">Memory Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Navigation">Navigation
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Passenger Airbag">Passenger Airbag
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Power Doors">Power Doors
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Power Locks">Power Locks
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Power Mirrors">Power Mirrors
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Power Seats">Power Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Power Tailgate">Power Tailgate
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Power Windows">Power Windows
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Quad Seats">Quad Seats
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Rear Air">Rear Air
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Rear Defroster">Rear Defroster
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Rear Spoiler">Rear Spoiler
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Running Boards">Running Boards
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Satellite Radio">Satellite Radio
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Side Airbags">Side Airbags
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Sun Roof">Sun Roof
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Third Row Seat">Third Row Seat
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Tilt Wheel">Tilt Wheel
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Tinted Windows">Tinted Windows
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Tool Box">Tool Box
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Tow Package">Tow Package
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Traction Control">Traction Control
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="TV/DVD">TV/DVD
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="TV/VCR">TV/VCR
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="vehicleOptions" type="checkbox"
+                                            aria-labelledby="lbvehicleOptions" name="SelectedOptions"
+                                            value="Woodgrain">Woodgrain
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mt2">
+                                <label id="lblFeatures" for="Features">Vehicle Description and Comments:</label>
+                                <textarea aria-labelledby="lblFeatures" id="txtFeatures"
+                                    class="form-control form-textarea" name="Features"></textarea>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Features"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+
+                            <div class="contact-disclaimer">
+                                <div class="required-asterisk">
+                                    <div>
+                                        <input type="checkbox" aria-label="Contact Consent" class="form-check-input"
+                                            id="chkContactDisclaimerConsent9551" data-val="true"
+                                            data-val-range="Please check the box to verify acknowledgement and consent."
+                                            data-val-range-max="True" data-val-range-min="True"
+                                            data-val-required="The ContactDisclaimerConsent field is required."
+                                            name="ContactDisclaimerConsent" value="true">
+                                        <label for="chkContactDisclaimerConsent9551"
+                                            aria-labelledby="chkContactDisclaimerConsent9551">
+                                            <strong>ACKNOWLEDGMENT AND CONSENT:</strong>
+                                        </label>
+                                        <span class="text-danger field-validation-valid"
+                                            data-valmsg-for="ContactDisclaimerConsent"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                    I hereby consent to receive text messages or phone calls from or on behalf of the
+                                    dealer or their employees to the mobile phone number I provided above. By opting in,
+                                    I understand that message and data rates may apply. This acknowledgement constitutes
+                                    my written consent to receive text messages to my cell phone and phone calls,
+                                    including communications sent using an auto-dialer or pre-recorded message. You may
+                                    withdraw your consent at any time by texting "STOP".
+                                </div>
+                            </div>
+
+
+                            <button id="ResponsiveTradeFormButton" class="btn submitButton">
+                                Submit
+                                <i id="ResponsiveTradeFormSpinner" class="fas fa-spinner fa-spin fa-fw"
+                                    style="display: none"></i>
+                            </button>
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="CfDJ8LRflBXo3w1DuyR521U-UyfOX1iAzSN_FKp7H4B-Qz4E9tyQ4Ymc_bAnhGChvHsdfuow6XepnQr05xrTxpqoGJyA2u8uAONM4P2uGo0LQ5Xr-dhftvicZcJEJs6aLA0t7CeP1qjIC_xvIWMFEIvMoPA"><input
+                                name="ContactDisclaimerConsent" type="hidden" value="false">
+                        </form>
+                        <input type="hidden" id="TradeInventoryId" name="InventoryId" value="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ============================================ -->
+    <!--                    FOOTER                    -->
+    <!-- ============================================ -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <a class="logo" href="index.html">
+                            <img style="height: 30px" src="images/logos/logo-1-no-background.jpg"></img>
+                        </a>
+                        <p class="section-text">
+                            Find your next vehicle here with us. We provide many vehicles that can suit your needs at an
+                            affordable price.
+                        </p>
+                    </div>
+                    <ul class="contact-list">
+                        <li><i class="fa fa-phone gray"></i><span> (555) 555-5555</span></li>
+                        <li><i class="fa fa-map-marker gray"></i><span> 123 Maple St., Somewhere, SS 38382</span></li>
+                        <li><i class="fa fa-envelope gray"></i><span> info@dealersite.com</span></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h3 class="primary">OPENING HOURS</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>MON:</th>
+                                <td>9:00am - 5:30pm</td>
+                            </tr>
+                            <tr>
+                                <th>TUE:</th>
+                                <td>9:00am - 5:30pm</td>
+                            </tr>
+                            <tr>
+                                <th>WED:</th>
+                                <td>9:00am - 5:30pm</td>
+                            </tr>
+                            <tr>
+                                <th>THU:</th>
+                                <td>9:00am - 5:30pm</td>
+                            </tr>
+                            <tr>
+                                <th>FRI:</th>
+                                <td>9:00am - 5:30pm</td>
+                            </tr>
+                            <tr>
+                                <th>SAT:</th>
+                                <td>9:00am - 5:30pm</td>
+                            </tr>
+                            <tr>
+                                <th>SUN:</th>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-content">
+                    <div class="links">
+                        <h3 class="primary">LINKS</h3>
+                        <ul>
+                            <li><a class="white" href="index.html">Home</a></li>
+                            <li><a class="white" href="inventory.html">Inventory</a></li>
+                            <li><a class="white" href="contact.html">Contact</a></li>
+                            <li><a class="white" href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <h3 class="primary">SOCIAL MEDIA</h3>
+                    <ul class="social-list">
+                        <li><a class="white" href="https://www.youtube.com"><i class="fa fa-youtube gray"></i></a></li>
+                        <li><a class="white" href="https://www.facebook.com"><i class="fa fa-facebook gray"></i></a>
+                        </li>
+                        <li><a class="white" href="https://www.instagram.com"><i class="fa fa-instagram gray"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    © 2022 <a href="#">webmoapps.com</a>. All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navMenu = document.getElementById("nav__menu"),
+            toggleMenu = document.getElementById("toggle__menu"),
+            closeMenu = document.getElementById("close__menu"),
+            overlay = document.querySelector(".overlay")
+
+        toggleMenu.addEventListener("click", () => {
+            navMenu.classList.toggle("show-menu");
+            overlay.classList.toggle("active");
+        })
+
+        closeMenu.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+            overlay.classList.remove("active");
+        })
+    </script>
 </body>
+
 </html>

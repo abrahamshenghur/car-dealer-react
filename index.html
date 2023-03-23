@@ -5,29 +5,53 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>San J Motors</title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="wrapper">
-        <header class="bg-primary">
-            <div class="flex flex-column">
-                <div class="secondary">
-                    <div class="left">
-                        <a href="index.html">
-                            <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
-                        </a>
+        <header class="header">
+            <div class="overlay" ></div>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-list">
+                        <li>
+                            <a href="mailto:info@dealersite.com" class="header-top-link">
+                                <i class="fa fa-envelope"></i><span>info@dealersite.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-top-link">
+                                <i class="fa fa-map-marker"></i><span>123 Maple St., Somewhere, SS 38382</span>
+                            </a>
+                        </li>
                     </div>
-                    <div class="right">Contact</div>
-                    <div class="right">Social Media</div>
                 </div>
-                <div class="bg-secondary">
-                    <ul class="flex justify-around list-style-none h3 caps">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="inventory.html">Inventory</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <a href="index.html">
+                        <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                    </a>
+                    <nav>
+                        <div class="toggle-menu" id="toggle__menu">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <ul class="nav-list" id="nav__menu">
+                            <div class="nav-sidebar-top">
+                                <a href="#">
+                                    <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                                </a>
+                                <div class="close-menu" id="close__menu">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        </ul>
+                    </nav>
                 </div>
-        
             </div>
         </header>
 
@@ -35,7 +59,7 @@
             <!-- ============================================ -->
             <!--                    TOP IMAGE                 -->
             <!-- ============================================ -->
-            <section class="flex" >
+            <section>
                 <div class="top-image bg-image-overlay h1 secondary">
                     THE BEST CARS MONEY CAN BUY
                 </div>
@@ -44,19 +68,21 @@
             <!-- ============================================ -->
             <!--                SECTION THUMBNAILS            -->
             <!-- ============================================ -->
-            <section >
-                <div class="flex flex-wrap justify-around h2 secondary" >
-                    <div class="clickable-container bg-image-overlay thumbnail-image-1">
-                        OUR STORY
-                        <a href="/about.html"><span class="link layer"></span></a>
-                    </div>
-                    <div class="clickable-container bg-image-overlay thumbnail-image-2">
-                        INVENTORY
-                        <a href="/inventory.html"><span class="link layer"></span></a>
-                    </div>
-                    <div class="clickable-container bg-image-overlay thumbnail-image-3">
-                        TRADE-IN
-                        <a href="/trade-in.html"><span class="link layer"></span></a>
+            <section class="pt4 pb4 pl2 pr2">
+                <div class="container">
+                    <div class="flex flex-wrap justify-around h2 secondary" >
+                        <div class="clickable-container bg-image-overlay thumbnail-image-1">
+                            OUR STORY
+                            <a href="/about.html"><span class="link layer"></span></a>
+                        </div>
+                        <div class="clickable-container bg-image-overlay thumbnail-image-2">
+                            INVENTORY
+                            <a href="/inventory.html"><span class="link layer"></span></a>
+                        </div>
+                        <div class="clickable-container bg-image-overlay thumbnail-image-3">
+                            TRADE-IN
+                            <a href="/trade-in.html"><span class="link layer"></span></a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -64,89 +90,94 @@
             <!-- ============================================ -->
             <!--             DESCRIPTION OVERLAY 1            -->
             <!-- ============================================ -->
-            <section>
-                <div class="description-overlay-bg-image-1">
-                    <div class="right bg-black muted-85 secondary" style=" width: 41.7%; min-height: 410px">
-                        <h2 class="primary">TRADE-IN</h2>
-                        <p>
-                            San J Motors strives to offer you the fairest deal on your trade-in. We will call or email you to schedule an appointment to inspect your vehicle and make you an offer. We pride ourselves on our friendly sales and support staff and will always treat you and your vehicle with respect.
-                        </p>
-                        <button class="bg-primary">
-                            <a class= "secondary"  href="/trade-in.html">TRADE-IN</a>
-                        </button>
-                    </div>
+            <section class="section-trade-in">
+                <div class="ection-trade-in-top col-55">
+                    <img style="width: 100%; height: auto; background-image: none;" src="images/website-images/services-description.png" alt="">
+                </div>
+                <div class="section-overlay-desc col-45 bg-black muted-85 secondary">
+                    <h2 class="primary">TRADE-IN</h2>
+                    <p>
+                        San J Motors strives to offer you the fairest deal on your trade-in. We will call or email you to schedule an appointment to inspect your vehicle and make you an offer. 
+                        <br>
+                        <br>
+                        We pride ourselves on our friendly sales and support staff and will always treat you and your vehicle with respect.
+                    </p>
+                    <button class="btn btn-blue">
+                        <a href="/trade-in.html">TRADE-IN</a>
+                    </button>
                 </div>
             </section>
 
             <!-- ============================================ -->
             <!--             DESCRIPTION OVERLAY 2            -->
             <!-- ============================================ -->
-            <section>
-                <div class="description-overlay-bg-image-2">
-                    <div class="left bg-primary muted-85 secondary" style=" width: 41.7%; min-height: 410px">
-                        <h2>WE BUY CARS</h2>
-                        <p>
-                            Here at San J Motors, when selling your car to us, we strive to make your life easier with our carefully structured process that requires you to do the minimum, while getting as much value out of the deal as possible.
-                            <br>
-                            <br>
-                            Selling your car to us, is not only fast, safe and convenient, we also ensure that you have a pleasant experience with our friendly, trustworthy and highly trained staff.
-                        </p>
-                        <button style="background-color: black ">
-                            <a class= "white"  href="/we-buy-cars.html">WE BUY CARS</a>
-                        </button>
-                    </div>
+            <section class="section-we-buy-cars mt4 mb4">
+                <div class="section-we-buy-cars-top col-55">
+                    <img style="width: 100%; height: auto; background-image: none;" src="images/website-images/we-buy-cars.png" alt="">
+                </div>
+                <div class="section-overlay-desc col-45 bg-primary muted-85 secondary">
+                    <h2 class="black">WE BUY CARS</h2>
+                    <p>
+                        Here at San J Motors, when selling your car to us, we strive to make your life easier with our carefully structured process that requires you to do the minimum, while getting as much value out of the deal as possible.
+                        <br>
+                        <br>
+                        Selling your car to us, is not only fast, safe and convenient, we also ensure that you have a pleasant experience with our friendly, trustworthy and highly trained staff.
+                    </p>
+                    <button class="btn btn-black">
+                        <a href="/we-buy-cars.html">WE BUY CARS</a>
+                    </button>
                 </div>
             </section>
             
             <!-- ============================================ -->
             <!--                    SHOWROOM                  -->
             <!-- ============================================ -->
-            <section>
+            <section class="pt3 pb3 pl2 pr2">
                 <div>
-                    <div class="flex justify-between">
-                        <div>
-                            <h2>
-                                <span class="black">FEATURED VEHICLES</span>
-                            </h2>
-                        </div>
-                        <div>
-                            <button>VIEW ALL</button>
-                        </div>
+                    <div class="line-through">
+                        <h2><span>FEATURED VEHICLES</span></h2>
                     </div>
-                    <div class="flex flex-wrap justify-around">
-                        <div class="flex flex-column">
-                            <img style="width: 240px" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
-                            <hw>Porsche 911 997.2 Carrera S PDK</hw>
+                    <div style="padding-top: 20px" class="flex flex-wrap justify-around">
+                        <div style="line-height: 27px;" class="flex flex-column">
+                            <img style="width: 240px; padding-bottom: 10px;" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
+                            <h3>2010 Porsche</h3>
+                            <h2 class="primary">911 Carrera S</h2>
                             <h4>$39,997</h4>
-                            <p>
-                                <a href="/Inventory/Vehicle">Read More</a>
+                            <p style="padding-bottom: 20px">
+                                <a href="vehicle.html">Read More</a>
                             </p>
                         </div>
-                        <div class="flex flex-column">
-                            <img style="width: 240px" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
-                            <hw>Porsche 911 997.2 Carrera S PDK</hw>
+                        <div style="line-height: 27px;" class="flex flex-column">
+                            <img style="width: 240px; padding-bottom: 10px;" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
+                            <h3>2010 Porsche</h3>
+                            <h2 class="primary">911 Carrera S</h2>
                             <h4>$39,997</h4>
-                            <p>
-                                <a href="/Inventory/Vehicle">Read More</a>
+                            <p style="padding-bottom: 20px">
+                                <a href="vehicle.html">Read More</a>
                             </p>
                         </div>
-                        <div class="flex flex-column">
-                            <img style="width: 240px" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
-                            <hw>Porsche 911 997.2 Carrera S PDK</hw>
+                        <div style="line-height: 27px;" class="flex flex-column">
+                            <img style="width: 240px; padding-bottom: 10px;" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
+                            <h3>2010 Porsche</h3>
+                            <h2 class="primary">911 Carrera S</h2>
                             <h4>$39,997</h4>
-                            <p>
-                                <a href="/Inventory/Vehicle">Read More</a>
+                            <p style="padding-bottom: 20px">
+                                <a href="vehicle.html">Read More</a>
                             </p>
                         </div>
-                        <div class="flex flex-column">
-                            <img style="width: 240px" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
-                            <hw>Porsche 911 997.2 Carrera S PDK</hw>
+                        <div style="line-height: 27px;" class="flex flex-column">
+                            <img style="width: 240px; padding-bottom: 10px;" src="https://www.friendsgreenporsche.com/wp-content/uploads/2022/04/IMG_2528-scaled.jpg"></img>
+                            <h3>2010 Porsche</h3>
+                            <h2 class="primary">911 Carrera S</h2>
                             <h4>$39,997</h4>
-                            <p>
-                                <a href="/Inventory/Vehicle">Read More</a>
+                            <p style="padding-bottom: 20px">
+                                <a href="vehicle.html">Read More</a>
                             </p>
                         </div>
                     </div>
+                    <div>
+                       <a href="inventory.html"><button class="btn btn-blue right">VIEW ALL</button></a>
+                   </div>
                 </div>
             </section>
         </main>
@@ -154,87 +185,104 @@
         <!-- ============================================ -->
         <!--                    FOOTER                    -->
         <!-- ============================================ -->
-        <footer class="white bg-black">
-            <div class='flex flex-wrap justify-evenly footer'>
-                <div class="left-align">
-                <h3 class="primary">CONTACT US</h3>
-                <p>
-                    <span class="gray">PHONE:</span>
-                    <br />
-                    (555) 555-5555
-                </p>
-                <p>
-                    <span class="gray">EMAIL:</span>
-                    <br />
-                    <a href='https://www.google.com' class='white'>info@dealersite.com</a>
-                </p>
-                <p>
-                    <span class="gray">ADDRESS:</span>
-                    <br />
-                    123 Maple St.
-                    <br />
-                    Somewhere, SS 38382
-                </p>
+        <footer>
+            <div class="footer-top">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <a class="logo" href="index.html">
+                                <img style="height: 30px" src="images/logos/logo-1-no-background.jpg" ></img>
+                            </a>
+                            <p class="section-text">
+                                Find your next vehicle here with us. We provide many vehicles that can suit your needs at an affordable price.
+                            </p>
+                        </div>
+                        <ul class="contact-list">
+                            <li><i class="fa fa-phone gray"></i><span> (555) 555-5555</span></li>
+                            <li><i class="fa fa-map-marker gray"></i><span> 123 Maple St., Somewhere, SS 38382</span></li>
+                            <li><i class="fa fa-envelope gray"></i><span> info@dealersite.com</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content">
+                        <h3 class="primary">OPENING HOURS</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>MON:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>TUE:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>WED:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>THU:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>FRI:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>SAT:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>SUN:</th>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer-content">
+                        <div class="links">
+                            <h3 class="primary">LINKS</h3>
+                            <ul>
+                                <li><a class="white" href="index.html">Home</a></li>
+                                <li><a class="white" href="inventory.html">Inventory</a></li>
+                                <li><a class="white" href="contact.html">Contact</a></li>
+                                <li><a class="white" href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-content">
+                        <h3 class="primary">SOCIAL MEDIA</h3>
+                        <ul class="social-list">
+                            <li><a class="white" href="https://www.youtube.com"><i class="fa fa-youtube gray"></i></a></li>
+                            <li><a class="white" href="https://www.facebook.com"><i class="fa fa-facebook gray"></i></a></li>
+                            <li><a class="white" href="https://www.instagram.com"><i class="fa fa-instagram gray"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="left-align">
-                <h3 class="primary">OPENING HOURS</h3>
-                <p class="gray">(By appointment)</p>
-                <p>
-                    <span class="gray">MON: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">TUE: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">WED: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">THU: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">FRI: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">SAT: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">SUN: </span>
-                    CLOSED
-                    <br />
-                </p>
-                </div>
-                <div class="left-align">
-                <h3 class="primary">LINKS</h3>
-                <ul class="list-style-none">
-                    <li>
-                    <Link class="white" to="/home">HOME</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/inventory">INVENTORY</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/about">CONTACT</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/contact">ABOUT</Link>
-                    </li>
-                </ul>
-                </div>
-                <div>
-                <h3 class="primary">SOCIAL MEDIA</h3>
-                <ul class="list-style-none">
-                    <li>
-                    <a  class="white" href="https://www.youtube.com">Youtube</a>
-                    </li>
-                    <li>
-                    <a  class="white" href="https://www.facebook.com">Facebook</a>
-                    </li>
-                    <li>
-                    <a  class="white" href="https://www.instagram.com">Instagram</a>
-                    </li>
-                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="copyright">
+                        © 2022 <a href="#">webmoapps.com</a>. All Rights Reserved
+                    </p>
                 </div>
             </div>
         </footer>
+
+        <script>
+            const navMenu = document.getElementById("nav__menu"),
+            toggleMenu = document.getElementById("toggle__menu"),
+            closeMenu = document.getElementById("close__menu"),
+            overlay = document.querySelector(".overlay")
+
+            toggleMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("show-menu");
+                overlay.classList.toggle("active");
+            })
+
+            closeMenu.addEventListener("click", () => {
+                navMenu.classList.remove("show-menu");
+                overlay.classList.remove("active");
+            })
+        </script>
     </body>
 </html>

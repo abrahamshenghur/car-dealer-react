@@ -7,6 +7,7 @@
         <title>Vehicle</title>
         <script src="jquery-3.6.0.js"></script>
         <script src="./javascript/imageArray.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 
         <style>
@@ -24,10 +25,10 @@
                 background-color: rgb(12, 104, 181, 0.3);
                 cursor: pointer;
                 position: absolute;
-                top: 40%;
+                /* top: 22%; */
                 width: auto;
                 padding: 16px;
-                margin-top: -50px;
+                /* margin-top: -22px; */
                 color: white;
                 font-weight: bold;
                 font-size: 20px;
@@ -55,6 +56,13 @@
                 top: 90;
             }
 
+            @media only screen and (max-width: 991px) {
+                #numbertext {
+                    font-size: 10px;
+                    padding: 5px;
+                }
+            }
+
             .column {
                 float: left;
                 width: 16.66%;
@@ -62,142 +70,353 @@
         </style>
 
     </head>
-    <body class="wrapper container" onload="makeImage();">
-        <header class="bg-primary">
-            <div class="flex flex-column">
-                <div class="secondary">
-                    <div class="left">
-                        <a href="index.html">
-                            <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
-                        </a>
+    <body class="wrapper" onload="makeImage();">
+        <header class="header">
+            <div class="overlay" ></div>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-list">
+                        <li>
+                            <a href="mailto:info@dealersite.com" class="header-top-link">
+                                <i class="fa fa-envelope"></i><span>info@dealersite.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-top-link">
+                                <i class="fa fa-map-marker"></i><span>123 Maple St., Somewhere, SS 38382</span>
+                            </a>
+                        </li>
                     </div>
-                    <div class="right">Contact</div>
-                    <div class="right">Social Media</div>
                 </div>
-                <div class="bg-secondary">
-                    <ul class="flex justify-around list-style-none h3 caps">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="inventory.html">Inventory</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <a href="index.html">
+                        <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                    </a>
+                    <nav>
+                        <div class="toggle-menu" id="toggle__menu">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <ul class="nav-list" id="nav__menu">
+                            <div class="nav-sidebar-top">
+                                <a href="#">
+                                    <img style="height: 50px" src="images/logos/logo-1.jpg" ></img>
+                                </a>
+                                <div class="close-menu" id="close__menu">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                            </div>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        </ul>
+                    </nav>
                 </div>
-        
             </div>
         </header>
 
         <div>
-            <br>
-            <h1>2009 Mazda RX-8</h1>
-            <h3>$15,000</h3>
-            <br>
+            <div class="vehicle-title">
+                <div>
+                    <h1 class="p2">2009 Mazda RX-8</h1>
+                </div>
+                <div class="vehicle-price bg-primary white p2">
+                    <h1>$15,000</h1>
+                </div>
+            </div>
+            <div class="vehicle-gallery-and-details flex">
+                <div class="vehicle-gallery-column">
+                    <div id="numbertext"></div>
+                    <div class="flex items-center">
+                        <a class="prev" onclick="previousImage()">❮</a>
+                        <img id="mainImage">
+                        <a class="next" onclick="nextImage()">❯</a>
+                    </div>
+                    <div class="gallery">
+                        <div id="vehicle-thumbnail-gallery" class="">
+                            <!-- Vehicle Gallery Grid -->
+                        </div>
+                    </div>
+                </div>
+                <div class="vehicle-highlights">
+                    <dl class="show-car-details">
+                        <div>
+                            <dt>Year</dt>
+                            <dd class="lead">2009</dd>
+                            <dt>Make</dt>
+                            <dd class="lead">Mazda</dd>
+                            <dt>Model</dt>
+                            <dd class="lead">RX-8</dd>
+                            <dt>Color</dt>
+                            <dd class="lead">Black</dd>
+                            <dt>Mileage</dt>
+                            <dd class="lead">34,400</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="car-inf0-container">
+                <div class="tab-container">
+                    <div class="tabs">
+                      <h3 class="active">DESCRIPTION</h3>
+                      <h3>SPECS & OPTIONS</h3>
+                    </div>
+    
+                    <div class="tabs-content">
+                        <div class="active">
+                            <ul>
+                                <li><h3>2009 MAZDA RX-8 FOR SALE IN USA</h3></li>
+                                <li>Black</li>
+                                <li>6-Speed Manual Transmission</li>
+                                <li>34,400mi</li>
+                            </ul>
+                            <br>
+                            <ul>
+                                <li><h3>MAINTENANCE & SERVICE</h3></li>
+                                <li>Engine oil & oil filter replacement</li>
+                                <li>Transmission Fluid replacement</li>
+                                <li>Water pump replacement</li>
+                                <li>Front and rear brake pads replacement</li>
+                            </ul>
+                         </div>
+                        <div class="spec-section-list">
+                            <ul>
+                                <li><h4>ENGINE</h4></li>
+                                <li>
+                                    <span class="spec-section-list-definition">Engine Type</span>
+                                    <br>
+                                    <span class="spec-section-list-description">Rotary</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Engine Size</span>
+                                    <br>
+                                    <span class="spec-section-list-description">1.3L</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Fuel Specification</span>
+                                    <br>
+                                    <span class="spec-section-list-description">Gasoline</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><h4>BODY</h4></li>
+                                <li>
+                                    <span class="spec-section-list-definition">Body Color</span>
+                                    <br>
+                                    <span class="spec-section-list-description">Black</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Body Style</span>
+                                    <br>
+                                    <span class="spec-section-list-description">Quad Coupe</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Doors</span>
+                                    <br>
+                                    <span class="spec-section-list-description">4</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li></li><h4>BASIC</h4></li>
+                                <li>
+                                    <span class="spec-section-list-definition">Year</span>
+                                    <br>
+                                    <span class="spec-section-list-description">2009</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Make</span>
+                                    <br>
+                                    <span class="spec-section-list-description">Mazda</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Model</span>
+                                    <br>
+                                    <span class="spec-section-list-description">RX-8</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">MI</span>
+                                    <br>
+                                    <span class="spec-section-list-description">34,400</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><h4>INTERIOR</h4></li>
+                                <li>
+                                    <span class="spec-section-list-definition">Interior Color</span>
+                                    <br>
+                                    <span class="spec-section-list-description">Black</span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Seats</span>
+                                    <br>
+                                    <span class="spec-section-list-description">4</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <div class="bg-primary p2 mb2 center h2">
+                        <a class="white" href="tel:555-555-5555"><i class="fa fa-phone white"></i> 555-555-5555</a>
+                    </div>
+                    <form action="/action_page.php">
+                        <p style="padding-bottom: 10px;">EMAIL US</p>
+                        <h3>CONTACT DETAILS</h3>
+    
+                        <input type="text" id="fname" name="firstname" placeholder="First Name">
+                  
+                        <input type="text" id="lname" name="lastname" placeholder="Last Name">
+    
+                        <input type="text" id="email" name="email" placeholder="Email Address">
+                    
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number">
+    
+                        <select class="form-control" required="required" name="contact[time_to_call]" id="contact_time_to_call"><option value="">Best Time To Call Me</option>
+                            <option value="any_time">Any Time</option>
+                            <option value="fr9to13">9:00 a.m. - 1:00 p.m.</option>
+                            <option value="fr13to17">1:00 p.m. - 5:00 p.m.</option>
+                            <option value="fr17to20">5:00 p.m. - 8:00 p.m.</option>
+                        </select>
+                        
+                        <label for="subject">Comments</label>
+                        <textarea id="subject" name="subject" style="height:200px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            
+
+
         </div>
+
+
         <!-- <div class="contents" id="content"></div>
         <button onclick="nextImage()">Next Image</button> -->
-
-        <div id="splash">
-            <div id="numbertext"></div>
-            <img  id="mainImage">
-        </div> 
-        <div id="controls">
-            <a class="prev" onclick="previousImage()">❮</a>
-            <a class="next" onclick="nextImage()">❯</a>
-        </div>
-
-        <div id="vehicle-gallery" class="flex flex-wrap left">
-            <!-- Vehicle Gallery Grid -->
-        </div>
-
-        <br>
-        <br>
 
 
             
         <!-- ============================================ -->
         <!--                    FOOTER                    -->
         <!-- ============================================ -->
-        <footer class="white bg-black">
-            <div class='flex flex-wrap justify-evenly footer'>
-                <div class="left-align">
-                <h3 class="primary">CONTACT US</h3>
-                <p>
-                    <span class="gray">PHONE:</span>
-                    <br />
-                    (555) 555-5555
-                </p>
-                <p>
-                    <span class="gray">EMAIL:</span>
-                    <br />
-                    <a href='https://www.google.com' class='white'>info@dealersite.com</a>
-                </p>
-                <p>
-                    <span class="gray">ADDRESS:</span>
-                    <br />
-                    123 Maple St.
-                    <br />
-                    Somewhere, SS 38382
-                </p>
+        <footer>
+            <div class="footer-top">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <a class="logo" href="index.html">
+                                <img style="height: 30px" src="images/logos/logo-1-no-background.jpg" ></img>
+                            </a>
+                            <p class="section-text">
+                                Find your next vehicle here with us. We provide many vehicles that can suit your needs at an affordable price.
+                            </p>
+                        </div>
+                        <ul class="contact-list">
+                            <li><i class="fa fa-phone gray"></i><span> (555) 555-5555</span></li>
+                            <li><i class="fa fa-map-marker gray"></i><span> 123 Maple St., Somewhere, SS 38382</span></li>
+                            <li><i class="fa fa-envelope gray"></i><span> info@dealersite.com</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content">
+                        <h3 class="primary">OPENING HOURS</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>MON:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>TUE:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>WED:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>THU:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>FRI:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>SAT:</th>
+                                    <td>9:00am - 5:30pm</td>
+                                </tr>
+                                <tr>
+                                    <th>SUN:</th>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer-content">
+                        <div class="links">
+                            <h3 class="primary">LINKS</h3>
+                            <ul>
+                                <li><a class="white" href="index.html">Home</a></li>
+                                <li><a class="white" href="inventory.html">Inventory</a></li>
+                                <li><a class="white" href="contact.html">Contact</a></li>
+                                <li><a class="white" href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-content">
+                        <h3 class="primary">SOCIAL MEDIA</h3>
+                        <ul class="social-list">
+                            <li><a class="white" href="https://www.youtube.com"><i class="fa fa-youtube gray"></i></a></li>
+                            <li><a class="white" href="https://www.facebook.com"><i class="fa fa-facebook gray"></i></a></li>
+                            <li><a class="white" href="https://www.instagram.com"><i class="fa fa-instagram gray"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="left-align">
-                <h3 class="primary">OPENING HOURS</h3>
-                <p class="gray">(By appointment)</p>
-                <p>
-                    <span class="gray">MON: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">TUE: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">WED: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">THU: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">FRI: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">SAT: </span>
-                    9:00am - 5:30pm
-                    <br />
-                    <span class="gray">SUN: </span>
-                    CLOSED
-                    <br />
-                </p>
-                </div>
-                <div class="left-align">
-                <h3 class="primary">LINKS</h3>
-                <ul class="list-style-none">
-                    <li>
-                    <Link class="white" to="/home">HOME</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/inventory">INVENTORY</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/about">CONTACT</Link>
-                    </li>
-                    <li>
-                    <Link class="white" to="/contact">ABOUT</Link>
-                    </li>
-                </ul>
-                </div>
-                <div>
-                <h3 class="primary">SOCIAL MEDIA</h3>
-                <ul class="list-style-none">
-                    <li>
-                    <a  class="white" href="https://www.youtube.com">Youtube</a>
-                    </li>
-                    <li>
-                    <a  class="white" href="https://www.facebook.com">Facebook</a>
-                    </li>
-                    <li>
-                    <a  class="white" href="https://www.instagram.com">Instagram</a>
-                    </li>
-                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="copyright">
+                        © 2022 <a href="#">webmoapps.com</a>. All Rights Reserved
+                    </p>
                 </div>
             </div>
         </footer>
+
+        <script>
+            let tabs = document.querySelectorAll(".tabs h3");
+            let tabContents = document.querySelectorAll(".tabs-content div");
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener("click", () => {
+                    tabContents.forEach((content) => {
+                        content.classList.remove("active");
+                    });
+                    tabs.forEach((tab) => {
+                        tab.classList.remove("active");
+                    });
+                    tabContents[index].classList.add("active");
+                    tabs[index].classList.add("active");
+                });
+            });
+        </script>
+
+        <script>
+            const navMenu = document.getElementById("nav__menu"),
+            toggleMenu = document.getElementById("toggle__menu"),
+            closeMenu = document.getElementById("close__menu"),
+            overlay = document.querySelector(".overlay")
+
+            toggleMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("show-menu");
+                overlay.classList.toggle("active");
+            })
+
+            closeMenu.addEventListener("click", () => {
+                navMenu.classList.remove("show-menu");
+                overlay.classList.remove("active");
+            })
+        </script>
 
         <script>
             // $.getJSON("vehicle-gallery.json", function(data) {
@@ -254,7 +473,7 @@
                 img.src = folder + idx + "." + suffix[cnt];  // !!!Need to check for other file extensions
 
                 img.onload = function () {
-                    let div =  `<div class="column" style="padding: 2px">
+                    let div =  `<div class="vehicle-img-gallery" style="padding: 2px">
                                     <img id="image-${idx}" src="${img.src}" alt="vehicle" style="object-fit: cover" onClick="currentSlide(${idx})">
                                 </div>`;
                     vehicleGallery.innerHTML += div;
@@ -293,7 +512,7 @@
             window.addEventListener("load", function () {
                 console.log("1  addEventListener");
 
-                vehicleGallery = document.getElementById("vehicle-gallery");
+                vehicleGallery = document.getElementById("vehicle-thumbnail-gallery");
                 
                 loadImage();
 
