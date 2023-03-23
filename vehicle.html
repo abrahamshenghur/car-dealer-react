@@ -464,8 +464,7 @@
             
             let cnt = 0, idx = 1, vehicleGallery, img;  // if idx = 0, it won't show images
 
-            document.getElementById("mainImage").src = folder + idx + "." + suffix[0];
-
+            document.getElementById("mainImage").src = "images/mazda-rx8-2009-06548/image-4.jpg"
             const loadImage = () => {
                 if (idx > maxImages) return;
                 if (cnt === 0) img = new Image();
@@ -474,7 +473,7 @@
 
                 img.onload = function () {
                     let div =  `<div class="vehicle-img-gallery" style="padding: 2px">
-                                    <img id="image-${idx}" src="${img.src}" alt="vehicle" style="object-fit: cover" onClick="currentSlide(${idx})">
+                                    <img id="image-${idx}" src="images/mazda-rx8-2009-06548/image-3.jpg" alt="vehicle" style="object-fit: cover" onClick="currentSlide(${idx})">
                                 </div>`;
                     vehicleGallery.innerHTML += div;
                     // vehicleGallery.appendChild(saveImg); This doesn't have CSS applied like the div above
