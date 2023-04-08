@@ -120,10 +120,10 @@
         <div>
             <div class="vehicle-title">
                 <div>
-                    <h1 class="p2">2009 Mazda RX-8</h1>
+                    <h1 class="p2" id="title"></h1>
                 </div>
                 <div class="vehicle-price bg-primary white p2">
-                    <h1>$15,000</h1>
+                    <h1 id="price"></h1>
                 </div>
             </div>
             <div class="vehicle-gallery-and-details flex">
@@ -144,20 +144,20 @@
                     <dl class="show-car-details">
                         <div>
                             <dt>Year</dt>
-                            <dd class="lead">2009</dd>
+                            <dd class="lead" id="year"></dd>
                             <dt>Make</dt>
-                            <dd class="lead">Mazda</dd>
+                            <dd class="lead" id="make"></dd>
                             <dt>Model</dt>
-                            <dd class="lead">RX-8</dd>
+                            <dd class="lead" id="model"></dd>
                             <dt>Color</dt>
-                            <dd class="lead">Black</dd>
+                            <dd class="lead" id="color"></dd>
                             <dt>Mileage</dt>
-                            <dd class="lead">34,400</dd>
+                            <dd class="lead" id="mileage"></dd>
                         </div>
                     </dl>
                 </div>
             </div>
-            <div class="car-inf0-container">
+            <div class="car-info-container">
                 <div class="tab-container">
                     <div class="tabs">
                       <h3 class="active">DESCRIPTION</h3>
@@ -165,21 +165,8 @@
                     </div>
     
                     <div class="tabs-content">
-                        <div class="active">
-                            <ul>
-                                <li><h3>2009 MAZDA RX-8 FOR SALE IN USA</h3></li>
-                                <li>Black</li>
-                                <li>6-Speed Manual Transmission</li>
-                                <li>34,400mi</li>
-                            </ul>
-                            <br>
-                            <ul>
-                                <li><h3>MAINTENANCE & SERVICE</h3></li>
-                                <li>Engine oil & oil filter replacement</li>
-                                <li>Transmission Fluid replacement</li>
-                                <li>Water pump replacement</li>
-                                <li>Front and rear brake pads replacement</li>
-                            </ul>
+                        <div class="active" id="description-tab">
+
                          </div>
                         <div class="spec-section-list">
                             <ul>
@@ -187,17 +174,22 @@
                                 <li>
                                     <span class="spec-section-list-definition">Engine Type</span>
                                     <br>
-                                    <span class="spec-section-list-description">Rotary</span>
+                                    <span class="spec-section-list-description" id="engine_type"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Engine Size</span>
                                     <br>
-                                    <span class="spec-section-list-description">1.3L</span>
+                                    <span class="spec-section-list-description" id="engine_size"></span>
+                                </li>
+                                <li>
+                                    <span class="spec-section-list-definition">Transmission</span>
+                                    <br>
+                                    <span class="spec-section-list-description" id="transmission"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Fuel Specification</span>
                                     <br>
-                                    <span class="spec-section-list-description">Gasoline</span>
+                                    <span class="spec-section-list-description" id="fuel_spec"></span>
                                 </li>
                             </ul>
                             <ul>
@@ -205,17 +197,17 @@
                                 <li>
                                     <span class="spec-section-list-definition">Body Color</span>
                                     <br>
-                                    <span class="spec-section-list-description">Black</span>
+                                    <span class="spec-section-list-description" id="exterior_color"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Body Style</span>
                                     <br>
-                                    <span class="spec-section-list-description">Quad Coupe</span>
+                                    <span class="spec-section-list-description" id="body_style"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Doors</span>
                                     <br>
-                                    <span class="spec-section-list-description">4</span>
+                                    <span class="spec-section-list-description" id="body_doors"></span>
                                 </li>
                             </ul>
                             <ul>
@@ -223,22 +215,22 @@
                                 <li>
                                     <span class="spec-section-list-definition">Year</span>
                                     <br>
-                                    <span class="spec-section-list-description">2009</span>
+                                    <span class="spec-section-list-description" id="basic_year"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Make</span>
                                     <br>
-                                    <span class="spec-section-list-description">Mazda</span>
+                                    <span class="spec-section-list-description" id="basic_make"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Model</span>
                                     <br>
-                                    <span class="spec-section-list-description">RX-8</span>
+                                    <span class="spec-section-list-description" id="basic_model"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">MI</span>
                                     <br>
-                                    <span class="spec-section-list-description">34,400</span>
+                                    <span class="spec-section-list-description" id="basic_mileage"></span>
                                 </li>
                             </ul>
                             <ul>
@@ -246,12 +238,12 @@
                                 <li>
                                     <span class="spec-section-list-definition">Interior Color</span>
                                     <br>
-                                    <span class="spec-section-list-description">Black</span>
+                                    <span class="spec-section-list-description" id="inteior_color"></span>
                                 </li>
                                 <li>
                                     <span class="spec-section-list-definition">Seats</span>
                                     <br>
-                                    <span class="spec-section-list-description">4</span>
+                                    <span class="spec-section-list-description" id="inteior_seats"></span>
                                 </li>
                             </ul>
                         </div>
@@ -448,33 +440,115 @@
             // doPortItem(1)
 
             
-            var imgArray = new Array(41);
 
-            const folder = "images/mazda-rx8-2009-06548/image-";
+            // const folder = sessionStorage.getItem("carFolder");
+            // console.log('folder', folder)
+            // console.log("object", JSON.parse(sessionStorage.getItem('object')))
 
-            for (i=0; i<imgArray.length; i++) {
-                imgArray[i] = new Image;
-                imgArray[i].src = folder + [i] + '.jpg';
+            const obj = JSON.parse(sessionStorage.getItem('object'));
+
+            const folder = obj.image_path;
+            const image_count = obj.image_count
+            var imgArray = new Array(image_count);
+
+            const year = obj.year
+            const make = obj.make
+            const model = obj.model
+            const price = obj.price
+            const mileage = obj.mileage
+
+            const engine_type = obj.engine_type
+            const engine_size = obj.engine_size
+            const transmission = obj.transmission
+            const fuel_spec = obj.fuel_spec
+            
+            const exterior_color = obj.exterior_color
+            const body_style = obj.body_style
+            const body_doors = obj.body_doors
+            
+            const basic_year = obj.basic_year
+            const basic_make = obj.basic_make
+            const basic_model = obj.basic_model
+            const basic_mileage = obj.basic_mileage
+            
+            const inteior_color = obj.inteior_color
+            const inteior_seats = obj.seats
+
+            const description = obj.description
+            const service = obj.service
+
+            let vehicle_info = `<h3 style="text-transform: uppercase">${year} ${make} ${model} FOR SALE IN USA</h3>`
+            let maintenance_service = '<br><h3>MAINTENANCE & SERVICE</h3>'
+
+            for (let i in obj.description_tab.vehicle_info) {
+                vehicle_info += "<p>" + obj.description_tab.vehicle_info[i] + "</p>";
             }
 
-            var carFolder = sessionStorage.getItem("carFolder");
+            for (let i in obj.description_tab.maintenance_service) {
+                maintenance_service += "<p>" + obj.description_tab.maintenance_service[i] + "</p>";
+            }
 
-            const maxImages = 40; // Arbitrary large number; should get item count, otherwise it prints alt image txt up to set #
+            // Title Section
+            document.getElementById("title").innerHTML = year + ' ' + make + ' ' + model;
+            document.getElementById("price").innerHTML = '$' + price;
+
+            // Vehicle highlights section
+            document.getElementById("year").innerHTML = year;
+            document.getElementById("make").innerHTML = make;
+            document.getElementById("model").innerHTML = model;
+            document.getElementById("color").innerHTML = exterior_color;
+            document.getElementById("mileage").innerHTML = mileage;
+
+            
+            // Description Tab section
+            document.getElementById("description-tab").innerHTML = vehicle_info + maintenance_service;
+            
+            // Spec & Options Tab section
+            /*Engine*/
+            document.getElementById("engine_type").innerHTML = engine_type;
+            document.getElementById("engine_size").innerHTML = engine_size;
+            document.getElementById("transmission").innerHTML = transmission;
+            document.getElementById("fuel_spec").innerHTML = fuel_spec;
+
+            /*Body*/
+            document.getElementById("exterior_color").innerHTML = exterior_color;
+            document.getElementById("body_style").innerHTML = body_style;
+            document.getElementById("body_doors").innerHTML = body_doors;
+
+            /*Basic*/
+            document.getElementById("basic_year").innerHTML = year;
+            document.getElementById("basic_make").innerHTML = make;
+            document.getElementById("basic_model").innerHTML = model;
+            document.getElementById("basic_mileage").innerHTML = mileage;
+
+            /*Interior*/
+            document.getElementById("inteior_color").innerHTML = inteior_color;
+            document.getElementById("inteior_seats").innerHTML = inteior_seats;
+
+            for (i=0; i<image_count; i++) {
+                imgArray[i] = new Image;
+                imgArray[i].src = folder + 'image-' + [i+1] + '.jpg';
+
+            }
+
+            // var carFolder = sessionStorage.getItem("carFolder");
+
+            const maxImages = image_count; // Arbitrary large number; should get item count, otherwise it prints alt image txt up to set #
             const suffix = ["jpg", "jpeg", "png"];
             
             let cnt = 0, idx = 1, vehicleGallery, img;  // if idx = 0, it won't show images
 
-            document.getElementById("mainImage").src = folder + idx + "." + suffix[0];
+            document.getElementById("mainImage").src = folder + 'image-' + idx + "." + suffix[0];
 
             const loadImage = () => {
                 if (idx > maxImages) return;
                 if (cnt === 0) img = new Image();
 
-                img.src = folder + idx + "." + suffix[cnt];  // !!!Need to check for other file extensions
+                img.src = folder + 'image-' + idx + "." + suffix[cnt];  // !!!Need to check for other file extensions
 
                 img.onload = function () {
                     let div =  `<div class="vehicle-img-gallery" style="padding: 2px">
-                                    <img id="image-${idx}" src="${img.src}" alt="vehicle" style="object-fit: cover" onClick="currentSlide(${idx})">
+                                    <img id="image-${idx}" src="${img.src}"  loading="lazy" alt="vehicle" style="object-fit: cover" onClick="currentSlide(${idx-1})">
                                 </div>`;
                     vehicleGallery.innerHTML += div;
                     // vehicleGallery.appendChild(saveImg); This doesn't have CSS applied like the div above
@@ -498,7 +572,7 @@
                     loadImage();
                 }
 
-                console.log("6  trying to load", folder, idx, "." + suffix[cnt]);
+                // console.log("6  trying to load", folder, idx, "." + suffix[cnt]);
 
 
             }
@@ -537,7 +611,7 @@
 
 
             function updateImageCounter(idx) {
-                numberTxt.innerHTML = `${idx} / ${maxImages}`;
+                numberTxt.innerHTML = `${idx+1} / ${maxImages}`;
             }
 
 
@@ -565,7 +639,7 @@
             function previousImage(){
                 var img = document.getElementById("mainImage");
                 
-                for (var i = imgArray.length-1; i >=0; i--) {
+                for (var i = imgArray.length-1; i >0; i--) {
                     numberTxt.innerHTML = `${i} / ${maxImages}`;
 
                     if (imgArray[i].src == img.src) {
@@ -601,4 +675,6 @@
     Load images from folder into HTML page for display in gallery/album automatically as they are added to folder
     https://stackoverflow.com/questions/68107197/load-images-from-folder-into-html-page-for-display-in-gallery-album-automaticall
 
+    How To Create Tabs Using HTML, CSS And Javascript
+    https://codingartistweb.com/2021/11/build-tabs-using-html-css-and-javascript/
 -->

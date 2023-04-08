@@ -666,9 +666,9 @@
     margin-bottom: 25px;
   }
   
-  .active {
+  /* .active {
     color: #ffffff
-  }
+  } */
   
   .toggle-menu,
   .close-menu {
@@ -904,9 +904,9 @@
     background-color: var(--primary);
   }
   
-  .active {
+  /* .active {
     color: #ffffff
-  }
+  } */
   
   
   /* ------------------------- */
@@ -1148,7 +1148,7 @@
     margin-bottom: 20px;
   }
 
-  .car-inf0-container {
+  .car-info-container {
     display: flex;
   }
 
@@ -1282,7 +1282,7 @@
       font-size: 12px;
     }
 
-    .car-inf0-container {
+    .car-info-container {
       display: flex;
       flex-direction: column;
       width: auto;

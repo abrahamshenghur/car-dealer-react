@@ -174,36 +174,79 @@
         <script>
             let jsonArray = [];
 
+
+
             $.getJSON("inventory.json", function(data) {
                 let inventoryGallery = document.querySelector("#inventory-gallery");
 
-                data.forEach(function(val) {
-                    var carFolder = val.image_url;
-                    jsonArray += carFolder
-                    sessionStorage.setItem("carFolder", carFolder);
+                data.forEach(function(val, idx) {
+                    // var mainImage = val.image_url;
+                    // jsonArray += mainImage
+                    // sessionStorage.setItem("carFolder", carFolder);
 
-                    inventoryGallery.innerHTML +=`<div class="column">
-                                            <div class="content card" style="padding-bottom: 20px">
-                                                <img src="${val.image_url}" alt="vehicle" style="width: 100%; height: 250px; padding-bottom: 10px; object-fit: cover">
-                                                <div style="height: 55px">
-                                                    <h2>${val.Year} ${val.Make} ${val.Model}</h2>
+                    // console.log("values", val)
+
+                    val.models.forEach(function(item, index) {
+                        inventoryGallery.innerHTML +=
+                                            `<div class="column">
+                                                <div class="content card" style="padding-bottom: 20px">
+                                                    <img src="${item.image_path}/image-1.jpg" alt="vehicle" style="width: 100%; height: 250px; padding-bottom: 10px; object-fit: cover">
+                                                    <div style="height: 55px">
+                                                        <h2>${item.year} ${val.make} ${item.model}</h2>
+                                                    </div>
+                                                    <br>
+                                                    <h2 class="primary">$${item.price}</h2>
+                                                    <br>
+                                                    <p><span class="h3">Mileage: </span>${item.mileage}</p>
+                                                    <br>
+                                                        <button onclick=" " class="btn btn-blue">
+                                                            Learn More
+                                                        </button>
                                                 </div>
-                                                <br>
-                                                <h2 class="primary">${val.Price}</h2>
-                                                <br>
-                                                <p><span class="h3">Mileage: </span>${val.Mileage}</p>
-                                                <br>
-                                                <a href="vehicle.html">
-                                                    <button class="btn btn-blue">
-                                                        Learn More
-                                                    </button>
-                                                </a>
-                                            </div>
-                                        </div>`;
+                                            </div>`;
+                                            jsonArray.push(item)
+                    })
                 });
-                                    console.log(jsonArray)
+
+                // We are selecting all the buttons
+                const btns = document.querySelectorAll("img");
+
+                // we are looping throught the selected buttons.
+                btns.forEach(btn => {
+                    // we are adding a click event to the buttons.
+                    // the (e) stands for event
+                    btn.addEventListener("click", (e) => {
+                        // e stands for event
+
+                        // To get the clicked element you use e.target
+
+
+                        // document.querySelectorAll returns a NodeList
+                        // To use indexOf we need to make it an array.
+                        // That is what Array.from() is for.
+                        const index = Array.from(btns).indexOf(e.target);
+
+                        // Now we call a alert using the index
+                        // alert(index);
+                        myFunction(index,this)
+                    });
+                });
+
+                console.log("jsonArray", jsonArray)
+
 
             });
+
+
+
+            var myFunction = function(idx, object) {
+                console.log('value', idx)
+                sessionStorage.setItem("object", JSON.stringify(jsonArray[idx]));
+                
+                console.log("object", jsonArray[idx])
+                window.location.href = 'vehicle.html'
+            };
+            
         </script>
     </body>
 </html>
@@ -221,6 +264,8 @@
     Pass Javascript Variables to Another Page
     https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
 
+    Is there a way to identify the index of one button among a list of many buttons in the DOM when it is clicked using javascript?
+    https://stackoverflow.com/questions/67427370/is-there-a-way-to-identify-the-index-of-one-button-among-a-list-of-many-buttons
 
 
 -->
