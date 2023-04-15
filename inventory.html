@@ -190,7 +190,7 @@
                         inventoryGallery.innerHTML +=
                                             `<div class="column">
                                                 <div class="content card" style="padding-bottom: 20px">
-                                                    <img src="${item.image_path}/image-1.jpg" alt="vehicle" style="width: 100%; height: 250px; padding-bottom: 10px; object-fit: cover">
+                                                    <img class="carImage" src="${item.image_path}/image-1.jpg" alt="vehicle" style="width: 100%; height: 250px; padding-bottom: 10px; object-fit: cover">
                                                     <div style="height: 55px">
                                                         <h2>${item.year} ${val.make} ${item.model}</h2>
                                                     </div>
@@ -208,8 +208,26 @@
                     })
                 });
 
+                if (document.readyState == 'loading') {
+                    document.addEventListener('DOMContentLoaded',execute);
+                }else{
+                    execute();
+                }
+
+                function execute() {
+                    const btns = document.getElementsByClassName("carImage");
+                    
+                    for(let i = 0; i < btns.length; i++){
+                        btns[i].addEventListener('click',function(){
+                            console.log('image index : '+i);
+                            myFunction(i,this)
+                        });
+                    }
+                }
+
+
                 // We are selecting all the buttons
-                const btns = document.querySelectorAll("img");
+                const btns = document.querySelectorAll("button");
 
                 // we are looping throught the selected buttons.
                 btns.forEach(btn => {

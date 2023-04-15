@@ -20,6 +20,71 @@
                 vertical-align: middle;
             }
 
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                align-items: center;
+                position: fixed; /* Stay in place */
+                z-index: 2; /* Sit on top */
+                padding-top: 0px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            }
+
+            /* Modal Content (image) */
+            .modal-content {
+                /* width: 90%; */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                /* color: #bbb; */
+                color: rgb(12, 104, 181, 1);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /* The Zoom Button*/
+            .zoom-mainImage { 
+                position: absolute;
+                padding: 20px;
+                top: 0;
+                right: 0;
+                color: #f1f1f1;
+                font-size: 35px;
+                font-weight: bold;
+                opacity: 0.5;
+                transition: 0.3s;
+            }
+
+            .zoom-mainImage:hover,
+            .zoom-mainImage:focus { 
+                color: rgb(12, 104, 181, 1);
+                opacity: 0.8;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
             .prev, 
             .next { 
                 background-color: rgb(12, 104, 181, 0.3);
@@ -33,6 +98,7 @@
                 font-weight: bold;
                 font-size: 20px;
                 border-radius: 0 3px 3px 0;
+                transition: 0.3s;
                 user-select: none;
                 -webkit-user-select: none;
             }
@@ -128,11 +194,23 @@
             </div>
             <div class="vehicle-gallery-and-details flex">
                 <div class="vehicle-gallery-column">
-                    <div id="numbertext"></div>
+                    <!-- <div id="numbertext"></div> -->
                     <div class="flex items-center">
                         <a class="prev" onclick="previousImage()">❮</a>
-                        <img id="mainImage">
+                        <img id="mainImage"> 
+                        <span class="zoom-mainImage"><i class="fa fa-search-plus"></i></span>
+
+                        
+
                         <a class="next" onclick="nextImage()">❯</a>
+                        
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <img class="modal-content" id="modalImage"> 
+                            <span class="close">&times;</span>
+                            <a class="prev" onclick="previousModalImage()">❮</a>
+                            <a class="next" onclick="nextModalImage()">❯</a>
+                        </div>
                     </div>
                     <div class="gallery">
                         <div id="vehicle-thumbnail-gallery" class="">
@@ -540,6 +618,32 @@
 
             document.getElementById("mainImage").src = folder + 'image-' + idx + "." + suffix[0];
 
+
+
+            // Get the <span> element that opens the modal
+            var span = document.getElementsByClassName("zoom-mainImage")[0];
+
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal
+            var mainImage = document.getElementById("mainImage");
+            var modalImg = document.getElementById("modalImage");
+
+            span.onclick = function(){
+                modal.style.display = "flex";
+                modalImg.src = mainImage.src; 
+            }
+
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
             const loadImage = () => {
                 if (idx > maxImages) return;
                 if (cnt === 0) img = new Image();
@@ -635,6 +739,26 @@
                 }
             }
 
+            function nextModalImage(){
+                var img = document.getElementById("modalImage");
+                
+                for (var i = 0; i < imgArray.length; i++) {
+                    // numberTxt.innerHTML = `${i} / ${maxImages}`;
+
+                    if (imgArray[i].src == img.src){
+                        if(i === imgArray.length){
+                            document.getElementById("modalImage").src = imgArray[0].src;
+                            break;
+                        }
+
+                        document.getElementById("modalImage").src = imgArray[i+1].src;
+                        updateImageCounter(i+1);
+
+                        break;
+                    }
+                }
+            }
+
 
             function previousImage(){
                 var img = document.getElementById("mainImage");
@@ -649,6 +773,30 @@
                         }
 
                         document.getElementById("mainImage").src = imgArray[i-1].src;
+                        updateImageCounter(i-1);
+
+                        break;
+                    }
+                }
+
+                console.log(numberTxt);
+
+            }
+            
+
+            function previousModalImage(){
+                var img = document.getElementById("modalImage");
+                
+                for (var i = imgArray.length-1; i >0; i--) {
+                    numberTxt.innerHTML = `${i} / ${maxImages}`;
+
+                    if (imgArray[i].src == img.src) {
+                        if(i === imgArray.length){
+                            document.getElementById("modalImage").src = imgArray[0].src;
+                            break;
+                        }
+
+                        document.getElementById("modalImage").src = imgArray[i-1].src;
                         updateImageCounter(i-1);
 
                         break;

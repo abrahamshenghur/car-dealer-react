@@ -154,6 +154,45 @@
         ]
     },
     {
+        "make": "Cadillac", 
+        "models": [
+            {
+                "year": "2000",
+                "make": "Cadillac", 
+                "model": "Escalade 4WD", 
+                "price": "6,500",
+                "mileage": "164,000",
+                "last_5_vin": "23781",
+        
+                "engine_type": "V8",
+                "engine_size": "5.7L",
+                "transmission": "4-Speed Automatic",
+                "fuel_spec": "Gasoline",
+        
+                "exterior_color": "Beige",
+                "inteior_color": "Tan",
+                "body_style": "SUV",
+                "body_doors": "4",
+                "seats": "7",
+        
+                "description_tab": {
+                    "vehicle_info": [
+                        "Beige",
+                        "4-Speed Automatic",
+                        "164,000 mi"
+                    ],
+                    "maintenance_service": [
+                        "Engine oil & oil filter replacement", 
+                        "Transmission Fluid replacement"
+                    ]
+                },
+
+                "image_path": "images/cadillac-escalade-2000-38272/",
+                "image_count": "1"
+            }
+        ]
+    },
+    {
         "make": "Chrysler", 
         "models": [
             {

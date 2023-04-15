@@ -1153,7 +1153,7 @@
   }
 
   .tab-container {
-    z-index: 9999;
+    /* z-index: 9999; */
     /* width: 96%; */
     margin-top: 40px;
     /* position: relative; */
